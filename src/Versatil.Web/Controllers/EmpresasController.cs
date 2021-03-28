@@ -170,6 +170,12 @@ namespace Versatil.Web.Controllers
             return Json(cidades);
 
         }
+
+        public async Task<JsonResult> CepCidade(string codibge){
+            var cidade = await _cidadesService.GetCidadeIbge(codibge);
+            return Json(cidade);
+        }
+
         //[Breadcrumb("ViewData.Title",  FromAction = nameof(Index))]
 
     }
