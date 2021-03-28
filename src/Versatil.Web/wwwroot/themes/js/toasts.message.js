@@ -24,7 +24,7 @@
       Swal.fire({
         position: 'top-end',
         icon: 'warning',
-        title: 'Preencha todos os campos obrigatórios',
+        title: msg,
         showConfirmButton: false,
         timer: 2000
       })
@@ -35,7 +35,7 @@
         toast: true,
         position: 'top-end',
         icon: 'warning',
-        title: 'Preencha todos os campos obrigatórios',
+        title: msg,
         showConfirmButton: false,
         timer: 2000
       })

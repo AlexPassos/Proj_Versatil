@@ -36,5 +36,11 @@ namespace Versatil.Domain.Services
             var dados = await _cidadesRepository.GetMany(x => x.ufID == id, expressionIncludes: null, orderBy: o => o.OrderBy(y => y.nome));
             return dados;
         }
+
+        public async Task<Cidades> GetCidadeIbge(string codibge)
+        {
+            var dados = await _cidadesRepository.Get(x => x.codibge.Trim() == codibge);
+            return dados;
+        }
     }
 }

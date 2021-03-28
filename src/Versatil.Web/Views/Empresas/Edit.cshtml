@@ -128,6 +128,11 @@
         var txtDescricao = $('#txtdescricao');
         var selUF = $('#selUF');
         var selCidades = $('#selCidades');
+        var txtCep = $('#cep');
+        var txtEndereco = $('#endereco');
+        var txtNumero = $('#numero');
+        var txtComplemento = $('#complemento');
+        var txtBairro = $('#bairro');
 
         //Initialize Elements
         $('#selUF').select2({
@@ -145,6 +150,55 @@
             }
         });
         $(':input').inputmask()
+
+         //Consultar CEP
+        txtCep.blur(function(){
+            
+            if (txtCep.val() == ''){
+                mensagemWarningToast("Digite o CEP para consultar");
+                return false;
+            }
+
+            var cep = txtCep.val().replace(".", "").replace("-", "");
+            var url = 'https://viacep.com.br/ws/' + cep + '/json/';
+
+            $.ajax({
+                dataType: 'json',
+                url: url,
+                type: 'GET',
+                success: function (retorno) {
+                    
+                    txtEndereco.val(retorno.logradouro);
+                    txtNumero.val('');
+                    txtComplemento.val('');
+                    txtBairro.val(retorno.bairro);
+
+                        setTimeout(function () {
+                            
+                            var url = '/empresas/CepCidade/';
+
+                            $.ajax({
+                                dataType: 'json',
+                                url: url,
+                                type: 'POST',
+                                data: { codibge: retorno.ibge },
+                                success: function (data) {
+                                    selUF.val(data.ufID).trigger('change');
+
+                                    setTimeout(function(){
+                                        selCidades.val(data.id).trigger('change');
+                                    }, 500)
+                                }
+                            });
+
+                        }, 500);
+
+                },
+                error: function (erro) {
+                    mensagemErro('Erro!');
+                }
+            });
+        });
 
         selUF.change(function () {
             console.log(selUF.val());
