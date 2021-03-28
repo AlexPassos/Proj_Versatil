@@ -1,0 +1,17 @@
+D:\Projetos_AspNetCore\Proj_Versatil\src\Versatil.Application\bin\Debug\net5.0\Versatil.Application.deps.json
+D:\Projetos_AspNetCore\Proj_Versatil\src\Versatil.Application\bin\Debug\net5.0\Versatil.Application.dll
+D:\Projetos_AspNetCore\Proj_Versatil\src\Versatil.Application\bin\Debug\net5.0\ref\Versatil.Application.dll
+D:\Projetos_AspNetCore\Proj_Versatil\src\Versatil.Application\bin\Debug\net5.0\Versatil.Application.pdb
+D:\Projetos_AspNetCore\Proj_Versatil\src\Versatil.Application\bin\Debug\net5.0\Versatil.Data.dll
+D:\Projetos_AspNetCore\Proj_Versatil\src\Versatil.Application\bin\Debug\net5.0\Versatil.Domain.dll
+D:\Projetos_AspNetCore\Proj_Versatil\src\Versatil.Application\bin\Debug\net5.0\Versatil.Domain.pdb
+D:\Projetos_AspNetCore\Proj_Versatil\src\Versatil.Application\bin\Debug\net5.0\Versatil.Data.pdb
+D:\Projetos_AspNetCore\Proj_Versatil\src\Versatil.Application\obj\Debug\net5.0\Versatil.Application.csprojAssemblyReference.cache
+D:\Projetos_AspNetCore\Proj_Versatil\src\Versatil.Application\obj\Debug\net5.0\Versatil.Application.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projetos_AspNetCore\Proj_Versatil\src\Versatil.Application\obj\Debug\net5.0\Versatil.Application.AssemblyInfoInputs.cache
+D:\Projetos_AspNetCore\Proj_Versatil\src\Versatil.Application\obj\Debug\net5.0\Versatil.Application.AssemblyInfo.cs
+D:\Projetos_AspNetCore\Proj_Versatil\src\Versatil.Application\obj\Debug\net5.0\Versatil.Application.csproj.CoreCompileInputs.cache
+D:\Projetos_AspNetCore\Proj_Versatil\src\Versatil.Application\obj\Debug\net5.0\Versatil.Application.csproj.CopyComplete
+D:\Projetos_AspNetCore\Proj_Versatil\src\Versatil.Application\obj\Debug\net5.0\Versatil.Application.dll
+D:\Projetos_AspNetCore\Proj_Versatil\src\Versatil.Application\obj\Debug\net5.0\ref\Versatil.Application.dll
+D:\Projetos_AspNetCore\Proj_Versatil\src\Versatil.Application\obj\Debug\net5.0\Versatil.Application.pdb

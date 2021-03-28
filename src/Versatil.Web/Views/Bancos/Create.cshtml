@@ -1,0 +1,112 @@
+@model Versatil.Domain.ViewModels.BancosViewModel
+
+@{
+    Layout = null;
+}
+
+ @Html.Partial("_ValidationScriptsPartial")
+
+<!-- form start -->
+<form id="formCreate" action="@Url.Action("Create")" method="POST" data-toggle="validator" role="form">
+    <div class="modal fade" id="mymodal" role="dialog" tabindex="-1" data-backdrop="static">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Novo cadastro</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    @* @Html.ValidationSummary(false, "", new { @class = "text-danger" }) *@
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+                    <div class="form-group">
+                        <label asp-for="descricao" class="control-label"></label>
+                        <input id="txtdescricao" asp-for="descricao" class="form-control" />
+                        <span asp-validation-for="descricao" class="text-danger text-sm"></span>
+                    </div>
+
+                    @* <div class="form-group">
+                        @Html.LabelFor(model => model.empresaID, htmlAttributes: new {@class = "control-label"})
+                        @Html.EditorFor(model => model.empresaID, new { htmlAttributes = new {@class =
+                            "form-control"}})
+                        @Html.ValidationMessageFor(model => model.empresaID, "", new {@class = "text-danger"})
+                    </div> *@
+
+                </div>
+                <div class="modal-footer justify-content-between">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+                    <button id="btnsalvar" type="button" class="btn bg-gradient-info ">Salvar</button>
+                </div>
+
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+    <!-- /.modal -->
+</form>
+    
+<script>
+    $(function () {
+
+        var form = $('#formCreate');
+        var thisForm = form[0];
+        var btnSalvar = $('#btnsalvar');
+        var myModal = $('#mymodal');
+        var txtDescricao = $('#txtdescricao');
+
+        btnSalvar.click(function () {
+
+            if (!form.valid()){
+                mensagemWarningToast('Preencha todos os campos obrigatórios');
+            }
+
+            if (form.valid()) {
+                btnSalvar.attr('disabled', 'disabled');
+                $.ajax({
+                    dataType: 'json',
+                    url: thisForm.action,
+                    type: thisForm.method,
+                    data: form.serialize(),
+                    beforeSend: function () {
+                        //blockUI('Processando...');
+                    },
+                    success: function (retorno) {
+                      
+                        if (retorno.success) {
+                            myModal.modal('hide');
+                            mensagemSuccess(retorno.messages[0]);
+                            setTimeout(function(){
+                                window.location.href = retorno.url;
+                            }, 1000);
+                        } else {
+                            btnSalvar.removeAttr('disabled');
+                            mensagemWarning(retorno.messages[0]);
+                        }
+                    },
+                    error: function (erro) {
+                        btnSalvar.removeAttr('disabled');
+                        mensagemErro('Erro!');
+                    }
+                });
+                /*.done(function (data) {
+                    console.log(data);
+                    if (data.success) {
+                        myModal.modal('hide');
+                        mensagemSuccess(data.messages[0]);
+                    } else {
+                        btnSalvar.removeAttr('disabled');
+                        mensagemWarning(data.messages[0]);
+                    }
+                }).fail(function (error) {
+                    btnSalvar.removeAttr('disabled');
+                    mensagemErro('Erro!!!');
+                });*/
+            }
+
+        });
+
+    });
+</script>
