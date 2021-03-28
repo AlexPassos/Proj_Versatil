@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "fm4QYHDZ2SnzCd8fuJN5mYNM7nNTJ81jd3Clim0nI2dR4wl5zY0DZcQJ+n6vj0UAlV8VH3khe6yXCR7Yh2iRLA==",
+  "dgSpecHash": "rTDeHJIzdz0Kaj+CptQknczSwpgriy2E4fOS0l4LMRMS8csl84ceQdiERfdhlCBJha7W2pX1BGxHY75J+s2rww==",
   "success": true,
-  "projectFilePath": "d:\\Projetos_AspNetCore\\Proj_Versatil\\src\\Versatil.Data\\Versatil.Data.csproj",
+  "projectFilePath": "D:\\Projetos_AspNetCore\\Proj_Versatil\\src\\Versatil.Data\\Versatil.Data.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Alex Passos\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
     "C:\\Users\\Alex Passos\\.nuget\\packages\\dapper\\2.0.78\\dapper.2.0.78.nupkg.sha512",

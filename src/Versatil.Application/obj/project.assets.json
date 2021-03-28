@@ -9471,11 +9471,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "d:\\Projetos_AspNetCore\\Proj_Versatil\\src\\Versatil.Application\\Versatil.Application.csproj",
+      "projectUniqueName": "D:\\Projetos_AspNetCore\\Proj_Versatil\\src\\Versatil.Application\\Versatil.Application.csproj",
       "projectName": "Versatil.Application",
-      "projectPath": "d:\\Projetos_AspNetCore\\Proj_Versatil\\src\\Versatil.Application\\Versatil.Application.csproj",
+      "projectPath": "D:\\Projetos_AspNetCore\\Proj_Versatil\\src\\Versatil.Application\\Versatil.Application.csproj",
       "packagesPath": "C:\\Users\\Alex Passos\\.nuget\\packages\\",
-      "outputPath": "d:\\Projetos_AspNetCore\\Proj_Versatil\\src\\Versatil.Application\\obj\\",
+      "outputPath": "D:\\Projetos_AspNetCore\\Proj_Versatil\\src\\Versatil.Application\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Alex Passos\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -9492,11 +9492,11 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "d:\\Projetos_AspNetCore\\Proj_Versatil\\src\\Versatil.Data\\Versatil.Data.csproj": {
-              "projectPath": "d:\\Projetos_AspNetCore\\Proj_Versatil\\src\\Versatil.Data\\Versatil.Data.csproj"
+            "D:\\Projetos_AspNetCore\\Proj_Versatil\\src\\Versatil.Data\\Versatil.Data.csproj": {
+              "projectPath": "D:\\Projetos_AspNetCore\\Proj_Versatil\\src\\Versatil.Data\\Versatil.Data.csproj"
             },
-            "d:\\Projetos_AspNetCore\\Proj_Versatil\\src\\Versatil.Domain\\Versatil.Domain.csproj": {
-              "projectPath": "d:\\Projetos_AspNetCore\\Proj_Versatil\\src\\Versatil.Domain\\Versatil.Domain.csproj"
+            "D:\\Projetos_AspNetCore\\Proj_Versatil\\src\\Versatil.Domain\\Versatil.Domain.csproj": {
+              "projectPath": "D:\\Projetos_AspNetCore\\Proj_Versatil\\src\\Versatil.Domain\\Versatil.Domain.csproj"
             }
           }
         }

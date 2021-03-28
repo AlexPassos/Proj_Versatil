@@ -10888,11 +10888,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "d:\\Projetos_AspNetCore\\Proj_Versatil\\src\\Versatil.Web\\Versatil.Web.csproj",
+      "projectUniqueName": "D:\\Projetos_AspNetCore\\Proj_Versatil\\src\\Versatil.Web\\Versatil.Web.csproj",
       "projectName": "Versatil.Web",
-      "projectPath": "d:\\Projetos_AspNetCore\\Proj_Versatil\\src\\Versatil.Web\\Versatil.Web.csproj",
+      "projectPath": "D:\\Projetos_AspNetCore\\Proj_Versatil\\src\\Versatil.Web\\Versatil.Web.csproj",
       "packagesPath": "C:\\Users\\Alex Passos\\.nuget\\packages\\",
-      "outputPath": "d:\\Projetos_AspNetCore\\Proj_Versatil\\src\\Versatil.Web\\obj\\",
+      "outputPath": "D:\\Projetos_AspNetCore\\Proj_Versatil\\src\\Versatil.Web\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Alex Passos\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -10909,11 +10909,11 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "d:\\Projetos_AspNetCore\\Proj_Versatil\\src\\Versatil.Application\\Versatil.Application.csproj": {
-              "projectPath": "d:\\Projetos_AspNetCore\\Proj_Versatil\\src\\Versatil.Application\\Versatil.Application.csproj"
+            "D:\\Projetos_AspNetCore\\Proj_Versatil\\src\\Versatil.Application\\Versatil.Application.csproj": {
+              "projectPath": "D:\\Projetos_AspNetCore\\Proj_Versatil\\src\\Versatil.Application\\Versatil.Application.csproj"
             },
-            "d:\\Projetos_AspNetCore\\Proj_Versatil\\src\\Versatil.Domain\\Versatil.Domain.csproj": {
-              "projectPath": "d:\\Projetos_AspNetCore\\Proj_Versatil\\src\\Versatil.Domain\\Versatil.Domain.csproj"
+            "D:\\Projetos_AspNetCore\\Proj_Versatil\\src\\Versatil.Domain\\Versatil.Domain.csproj": {
+              "projectPath": "D:\\Projetos_AspNetCore\\Proj_Versatil\\src\\Versatil.Domain\\Versatil.Domain.csproj"
             }
           }
         }

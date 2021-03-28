@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "4fFjt+7UzWiH0qjS+1IjzAjDjMKTZW+wcjNaOja1e3aT9qz5isvhI24iT4aUWwhRwovMTqkuTryn7IPsK9KCxg==",
+  "dgSpecHash": "PYbYChBMQ1fzI7vzaikOPjr2GoMDltkdyJrvOhufux+okrDZR10epBiKODtcKl1wRky7f4Pgqsl2nIbEX+UUAQ==",
   "success": true,
-  "projectFilePath": "d:\\Projetos_AspNetCore\\Proj_Versatil\\src\\Versatil.Web\\Versatil.Web.csproj",
+  "projectFilePath": "D:\\Projetos_AspNetCore\\Proj_Versatil\\src\\Versatil.Web\\Versatil.Web.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Alex Passos\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
     "C:\\Users\\Alex Passos\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\8.1.1\\automapper.extensions.microsoft.dependencyinjection.8.1.1.nupkg.sha512",
