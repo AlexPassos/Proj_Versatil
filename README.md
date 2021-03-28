@@ -1,4 +1,5 @@
 # Proj_Versatil
 AspNet Core 5.0
 
-Alex
+Desenvolvido por Alex Passos
+alexpassosribeiro@gmail.com

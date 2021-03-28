@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "78mzsOPhddpcIlD32eBVJ7J4OcxuefuQ/l572t4BtAmcA0cQFpVJJUvxwCm2q5e3xHkwh9t4PhzR09kkHYdbdw==",
+  "dgSpecHash": "Agn7MkjEdso7rMPJwrB7e5+WrciVdDScy4nq8oDYsSs/1ZE9q272bIBi7oJSTPgUoMRq9D0lZ8IKIUBPLbeVEQ==",
   "success": true,
-  "projectFilePath": "d:\\Projetos_AspNetCore\\Proj_Versatil\\src\\Versatil.Domain\\Versatil.Domain.csproj",
+  "projectFilePath": "D:\\Projetos_AspNetCore\\Proj_Versatil\\src\\Versatil.Domain\\Versatil.Domain.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Alex Passos\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
     "C:\\Users\\Alex Passos\\.nuget\\packages\\epplus\\4.5.3.3\\epplus.4.5.3.3.nupkg.sha512",
