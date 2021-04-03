@@ -63,6 +63,8 @@ namespace Versatil.Domain.ViewModels
         public DateTime? demissao { get; set; }
 
         [Display(Name = "Salário")]
+        [DataType(DataType.Currency)]
+        [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:C2}")]
         public Decimal? salario { get; set; }
 
         [Display(Name = "Endereço")]

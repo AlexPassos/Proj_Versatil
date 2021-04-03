@@ -82,6 +82,9 @@ namespace Versatil.Web
 
             //Use Globalization
             var defaultCulture = new CultureInfo("pt-BR");
+            defaultCulture.NumberFormat.NumberDecimalSeparator = ".";
+            defaultCulture.NumberFormat.CurrencyDecimalSeparator = ",";
+            defaultCulture.NumberFormat.CurrencySymbol = "R$ ";
             var localizationOptions = new RequestLocalizationOptions
             {
                 DefaultRequestCulture = new RequestCulture(defaultCulture),

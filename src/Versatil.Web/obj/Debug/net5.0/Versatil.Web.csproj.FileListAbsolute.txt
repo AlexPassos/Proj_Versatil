@@ -188,3 +188,11 @@ D:\Projetos_AspNetCore\Proj_Versatil\src\Versatil.Web\obj\Debug\net5.0\Razor\Vie
 D:\Projetos_AspNetCore\Proj_Versatil\src\Versatil.Web\obj\Debug\net5.0\Razor\Views\Marcas\Edit.cshtml.g.cs
 D:\Projetos_AspNetCore\Proj_Versatil\src\Versatil.Web\obj\Debug\net5.0\Razor\Views\Marcas\Index.cshtml.g.cs
 D:\Projetos_AspNetCore\Proj_Versatil\src\Versatil.Web\obj\Debug\net5.0\Razor\Views\Marcas\_IndexResult.cshtml.g.cs
+D:\Projetos_AspNetCore\Proj_Versatil\src\Versatil.Web\obj\Debug\net5.0\Razor\Views\Setores\Create.cshtml.g.cs
+D:\Projetos_AspNetCore\Proj_Versatil\src\Versatil.Web\obj\Debug\net5.0\Razor\Views\Setores\Edit.cshtml.g.cs
+D:\Projetos_AspNetCore\Proj_Versatil\src\Versatil.Web\obj\Debug\net5.0\Razor\Views\Setores\Index.cshtml.g.cs
+D:\Projetos_AspNetCore\Proj_Versatil\src\Versatil.Web\obj\Debug\net5.0\Razor\Views\Setores\_IndexResult.cshtml.g.cs
+D:\Projetos_AspNetCore\Proj_Versatil\src\Versatil.Web\obj\Debug\net5.0\Razor\Views\Servicos\Create.cshtml.g.cs
+D:\Projetos_AspNetCore\Proj_Versatil\src\Versatil.Web\obj\Debug\net5.0\Razor\Views\Servicos\Edit.cshtml.g.cs
+D:\Projetos_AspNetCore\Proj_Versatil\src\Versatil.Web\obj\Debug\net5.0\Razor\Views\Servicos\Index.cshtml.g.cs
+D:\Projetos_AspNetCore\Proj_Versatil\src\Versatil.Web\obj\Debug\net5.0\Razor\Views\Servicos\_IndexResult.cshtml.g.cs

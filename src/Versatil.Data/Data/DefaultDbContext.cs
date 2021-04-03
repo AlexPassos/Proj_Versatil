@@ -19,6 +19,8 @@ namespace Versatil.Data.Data
         public DbSet<Empresas> EMPRESASs { get; set; }
         public DbSet<Bancos> BANCOSs { get; set; }
         public DbSet<Marcas> MARCASs { get; set; }
+        public DbSet<Setores> SETORESs { get; set; }
+        public DbSet<Servicos> SERVICOSs { get; set; }
         public DbSet<Funcionarios> FUNCIONARIOSs { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
