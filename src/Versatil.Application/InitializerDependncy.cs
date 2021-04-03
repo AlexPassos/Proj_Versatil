@@ -7,6 +7,9 @@ using Versatil.Domain.Interfaces.Repositories;
 using Versatil.Data.Repositories;
 using Versatil.Domain.Services;
 using Versatil.Domain.Interfaces.Services;
+using Versatil.Domain.Interfaces;
+using Versatil.Domain.Notificacoes;
+using Versatil.Domain.Extensions;
 
 namespace Versatil.Application
 {
@@ -14,6 +17,10 @@ namespace Versatil.Application
     {
         public static IServiceCollection Register(this IServiceCollection services, IConfiguration configuration)
         {
+             // ASPNET
+            services.AddHttpContextAccessor();
+            services.AddScoped<IUser, AspNetUser>();
+            
             //String conexao
             var DefaultConnectionString = configuration.GetConnectionString("DefaultConnectionString");
 
@@ -26,12 +33,15 @@ namespace Versatil.Application
             services.AddScoped<ICidadesRepository, CidadesRepository>();
             services.AddScoped<IEmpresasRepository, EmpresasRepository>();
             services.AddScoped<IBancosRepository, BancosRepository>();
+            services.AddScoped<IFuncionariosRepository, FuncionariosRepository>();
 
             //Serives
+            services.AddScoped<INotificador, Notificador>();
             services.AddScoped<IUfService, UfService>();
             services.AddScoped<ICidadesService, CidadesService>();
             services.AddScoped<IEmpresasService, EmpresasService>();
             services.AddScoped<IBancosService, BancosService>();
+            services.AddScoped<IFuncionariosService, FuncionariosService>();
 
             return services;
         }

@@ -6,7 +6,7 @@ namespace Versatil.Domain.ViewModels
     {
         public int id { get; set; }
 
-        [Required(ErrorMessage = "O campo {0} é obrigatório.")]
+        [Required(ErrorMessage = "{0} é obrigatório.")]
         [Display(Name = "Nome do banco")]
         public string descricao { get; set; }
 

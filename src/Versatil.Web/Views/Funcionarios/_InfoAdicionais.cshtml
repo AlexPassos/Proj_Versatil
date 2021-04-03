@@ -1,0 +1,55 @@
+@model Versatil.Domain.ViewModels.FuncionariosViewModel
+
+<div class="form-row">
+
+      <div class="form-group col-sm-2">
+        <label asp-for="admissao" class="control-label text-sm"></label>
+        <input asp-for="admissao" class="form-control form-control-sm" data-inputmask="'mask': '99/99/9999'" />
+        <span asp-validation-for="admissao" class="text-danger text-xs"></span>
+    </div>
+
+      <div class="form-group col-sm-2">
+        <label asp-for="demissao" class="control-label text-sm"></label>
+        <input asp-for="demissao" class="form-control form-control-sm" data-inputmask="'mask': '99/99/9999'" />
+        <span asp-validation-for="demissao" class="text-danger text-xs"></span>
+    </div>
+     <div class="form-group col-sm-3">
+        <label asp-for="salario" class="control-label text-sm"></label>
+        <input asp-for="salario" class="form-control form-control-sm"  />
+        <span asp-validation-for="salario" class="text-danger text-xs"></span>
+    </div>
+</div>
+
+<div class="form-row">
+   
+    <div class="form-group col-sm-4">
+        <label asp-for="carteira" class="control-label text-sm"></label>
+        <input asp-for="carteira" class="form-control form-control-sm" />
+        <span asp-validation-for="carteira" class="text-danger text-xs"></span>
+    </div>
+    <div class="form-group col-sm-4">
+        <label asp-for="pis" class="control-label text-sm"></label>
+        <input asp-for="pis" class="form-control form-control-sm" />
+        <span asp-validation-for="pis" class="text-danger text-xs"></span>
+    </div>
+    <div class="form-group col-sm-4">
+        <label asp-for="titulo" class="control-label text-sm"></label>
+        <input asp-for="titulo" class="form-control form-control-sm" />
+        <span asp-validation-for="titulo" class="text-danger text-xs"></span>
+    </div>
+   
+  
+</div>
+<div class="form-row">
+  
+    <div class="form-group col-sm-4">
+        <label asp-for="habilitacao" class="control-label text-sm"></label>
+        <input asp-for="habilitacao" class="form-control form-control-sm" />
+        <span asp-validation-for="habilitacao" class="text-danger text-xs"></span>
+    </div>
+    <div class="form-group col-sm-4">
+        <label asp-for="reservista" class="control-label text-sm"></label>
+        <input asp-for="reservista" class="form-control form-control-sm"  />
+        <span asp-validation-for="reservista" class="text-danger text-xs"></span>
+    </div>
+</div>

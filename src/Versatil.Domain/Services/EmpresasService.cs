@@ -12,7 +12,6 @@ namespace Versatil.Domain.Services
 {
     public class EmpresasService : IEmpresasService
     {
-
         private readonly IMapper _mapper;
         private readonly IEmpresasRepository _empresasRepository;
 

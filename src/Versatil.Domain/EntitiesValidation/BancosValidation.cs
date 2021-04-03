@@ -5,9 +5,9 @@ namespace Versatil.Domain.EntitiesValidation
 {
     public class BancosValidation : AbstractValidator<Bancos>
     {
-        // public BancosValidation(){
-        //     RuleFor(x => x.descricao)
-        //         .NotEmpty();
-        // }
+         public BancosValidation(){
+             RuleFor(x => x.descricao)
+                 .NotEmpty().WithMessage("Informe o nome do banco");
+         }
     }
 }

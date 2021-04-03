@@ -31,8 +31,6 @@
     <link rel="stylesheet" href="~/themes/plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css">
     <!-- Theme style -->
     <link rel="stylesheet" href="~/themes/css/adminlte.min.css">
-    <!-- style -->
-    <link rel="stylesheet" href="~/themes/css/site.css">
     <!-- overlayScrollbars -->
     <link rel="stylesheet" href="~/themes/plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
     <!-- Daterange picker -->
@@ -43,6 +41,8 @@
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
     <!-- SweetAlert2 -->
     <link rel="stylesheet" href="~/themes/plugins/sweetalert2/sweetalert2.min.css">
+    <!-- style -->
+    <link rel="stylesheet" href="~/themes/css/site.css" asp-append-version="true">
 
 
 </head>
@@ -69,6 +69,10 @@
         <!-- /.content-wrapper -->
 
         @Html.Partial("_FooterPage")
+
+        <span id="message-success" style="display: none;" data-message="@TempData["Success"]"></span>
+        <span id="message-error" style="display: none;" data-message="@TempData["Error"]"></span>
+        <span id="message-warning" style="display: none;" data-message="@TempData["Warning"]"></span>
 
         <!-- Control Sidebar -->
         <aside class="control-sidebar control-sidebar-dark">
@@ -134,8 +138,52 @@
     <script src="~/themes/js/demo.js"></script>
     <script src="~/themes/js/toasts.message.js" asp-append-version="true"></script>
     <script src="~/themes/js/confirmacao.message.js" asp-append-version="true"></script>
+    <script src="~/themes/js/clsgeral.js" asp-append-version="true"></script>
 
     @await RenderSectionAsync("Scripts", required: false)
+
+    <script>
+        $(function () {
+
+            // message success
+            var messageSuccess = $('#message-success').data('message');
+            if (messageSuccess != '') {
+              /*  toastr.options = {
+                    "closeButton": true,
+                    "progressBar": true,
+                    "positionClass": "toast-bottom-right"
+                }
+                toastr["success"](messageSuccess);*/
+                mensagemSuccess(messageSuccess);
+            }
+
+            // message error
+            var messageError = $('#message-error').data('message');
+            if (messageError != '') {
+                /*toastr.options = {
+                    "closeButton": true,
+                    "progressBar": true,
+                    "timeOut": "10000",
+                    "positionClass": "toast-bottom-right"
+                }
+                toastr["error"](messageError);*/
+                 mensagemErro(messageError);
+            }
+
+            // message warning
+            var messageWarning = $('#message-warning').data('message');
+            if (messageWarning != '') {
+                /*toastr.options = {
+                    "closeButton": true,
+                    "progressBar": true,
+                    "timeOut": "10000",
+                    "positionClass": "toast-bottom-right"
+                }
+                toastr["error"](messageError);*/
+                 mensagemWarning(messageWarning);
+            }
+        });
+    </script>
 </body>
 
 </html>

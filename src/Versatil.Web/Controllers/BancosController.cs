@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using SmartBreadcrumbs.Attributes;
+using Versatil.Domain.Interfaces;
 using Versatil.Domain.Interfaces.Services;
 using Versatil.Domain.ViewModels;
 using Versatil.Web.Models;
@@ -18,9 +19,10 @@ namespace Versatil.Web.Controllers
         private readonly IBancosService _bancosService;
 
         public BancosController(
+            INotificador notificador,
+            IUser user,
             ILogger<BancosController> logger,
-            IBancosService bancosService
-            )
+            IBancosService bancosService) : base(notificador, user)
         {
             _logger = logger;
             _bancosService = bancosService;
@@ -45,13 +47,7 @@ namespace Versatil.Web.Controllers
         public async Task<IActionResult> Create(BancosViewModel viewModel)
         {
 
-            var jsonRetorno = new JsonRetorno();
-
-            if (!ModelState.IsValid)
-            {
-                jsonRetorno.Messages = GetErrosModelState();
-                return Json(jsonRetorno);
-            }
+            //var jsonRetorno = new JsonRetorno();
 
             if (ModelState.IsValid)
             {
@@ -61,18 +57,18 @@ namespace Versatil.Web.Controllers
 
                 await _bancosService.Salvar(model);
 
-                //TempData["Success"] = "Operação realizada com sucesso";
-                jsonRetorno.Success = true;
-                jsonRetorno.url = Url.Action("Index", "Bancos");
-                jsonRetorno.Messages.Add("Operação realizada com sucesso");
+                TempData["Success"] = "Operação realizada com sucesso";
+                // jsonRetorno.Success = true;
+                // jsonRetorno.url = Url.Action("Index", "Bancos");
+                // jsonRetorno.Messages.Add("Operação realizada com sucesso");
 
-                //return RedirectToAction(nameof(Index), jsonRetorno);
-                return Json(jsonRetorno);
+                return RedirectToAction("Index", "Bancos");
+                //return Json(jsonRetorno);
 
             }
 
-            jsonRetorno.Messages = GetErrosModelState();
-            return Json(jsonRetorno);
+            TempData["Error"] = "Ops! Falha na solicitação da requisição.";
+            return RedirectToAction("Index", "Bancos");
         }
 
         [HttpGet]
@@ -88,13 +84,7 @@ namespace Versatil.Web.Controllers
         public async Task<IActionResult> Edit(BancosViewModel viewModel)
         {
 
-            var jsonRetorno = new JsonRetorno();
-
-            if (!ModelState.IsValid)
-            {
-                jsonRetorno.Messages = GetErrosModelState();
-                return Json(jsonRetorno);
-            }
+            //var jsonRetorno = new JsonRetorno();
 
             if (ModelState.IsValid)
             {
@@ -105,16 +95,12 @@ namespace Versatil.Web.Controllers
 
                 await _bancosService.Update(model);
 
-                jsonRetorno.Success = true;
-                jsonRetorno.url = Url.Action("Index", "Bancos");
-                jsonRetorno.Messages.Add("Operação realizada com sucesso");
-
-                return Json(jsonRetorno);
-
+                TempData["Success"] = "Operação realizada com sucesso";
+                return RedirectToAction("Index", "Bancos");
             }
 
-            jsonRetorno.Messages = GetErrosModelState();
-            return Json(jsonRetorno);
+            TempData["Error"] = "Ops! Falha na solicitação da requisição.";
+            return RedirectToAction("Index", "Bancos");
         }
 
         [HttpDelete]

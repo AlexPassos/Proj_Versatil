@@ -1,0 +1,50 @@
+@model IEnumerable<Versatil.Domain.ViewModels.FuncionariosViewModel>
+
+<table id="table-data" class="table table-striped table-hover dataTable" role="grid">
+    <thead>
+        <tr role="row">
+            <th class="colSituacao sorting_asc text-sm" tabindex="0" aria-controls="table-data" rowspan="1" colspan="1"
+                aria-sort="ascending">
+                Situação</th>
+            <th class="colData sorting_asc text-sm" tabindex="0" aria-controls="table-data" rowspan="1" colspan="1"
+                aria-sort="ascending">
+                Data</th>
+            <th class="sorting_asc text-sm" tabindex="0" aria-controls="table-data" rowspan="1" colspan="1"
+                aria-sort="ascending">
+                Nome</th>
+            <th class="colEditar text-sm">Editar</th>
+            <th class="colExcluir text-sm">Excluir</th>
+        </tr>
+    </thead>
+    <tbody>
+
+        @foreach (var item in Model)
+        {
+            @* @String.Format("{0:dd/MM/yyyy}",ViewBag.TerminoDaAvaliacao) *@
+            @* <input asp-for="MyDate" asp-format="{0:dd/MM/yyyy}" class="form-control" /> *@
+            @* @Html.TextBoxFor(model => model.MyDate, "{0:dd/MM/yyyy}", new { @class = "form-control" }) *@
+
+            string situacao = item.situacao == true ? "Ativo" : "Inativo";
+
+            <tr role="row" class="odd">
+                <td class="no_sort text-md">@situacao</td>
+                <td class="sorting_1 text-md">@Html.DisplayFor(model => item.data)</td>
+                <td class="sorting_1 text-md">@Html.DisplayFor(model => item.nome)</td>
+                <td class="text-center">
+                    <button class="btn bg-gradient-secondary btn-sm btneditar" 
+                        data-url="@Url.Action("Edit", new {id = item.id})"
+                        data-loading-text="..."><i class="fas fa-edit"></i>
+                    </button>
+                </td>
+                <td class="text-center">
+                    <button class="btn bg-gradient-danger btn-sm btnexcluir"
+                        data-url="@Url.Action("Delete", new {id = item.id})"
+                        data-nome="@item.nome"
+                        data-loading-text="..."><i class="fas fa-trash"></i>
+                    </button>
+                </td>
+            </tr>
+        }
+
+    </tbody>
+</table>

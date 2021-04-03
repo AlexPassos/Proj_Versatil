@@ -7,7 +7,8 @@
  @Html.Partial("_ValidationScriptsPartial")
 
 <!-- form start -->
-<form id="formCreate" action="@Url.Action("Edit")" method="POST" data-toggle="validator" role="form">
+@* <form id="formCreate" action="@Url.Action("Edit")" method="POST" data-toggle="validator" role="form"> *@
+<form id="formCreate" asp-action="Edit" method="POST" >
     <div class="modal fade" id="mymodal" role="dialog" tabindex="-1" data-backdrop="static">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -22,7 +23,7 @@
 
                     <div class="form-group">
                         <label asp-for="descricao" class="control-label"></label>
-                        <input id="txtdescricao" asp-for="descricao" class="form-control" />
+                        <input id="txtdescricao" asp-for="descricao" class="form-control form-control-sm" />
                         <span asp-validation-for="descricao" class="text-danger text-sm"></span>
                     </div>
 
@@ -51,38 +52,13 @@
 
         btnSalvar.click(function () {
 
-            if (!form.valid()){
-                mensagemWarningToast('Preencha todos os campos obrigatórios');
-            }
-
             if (form.valid()) {
                 btnSalvar.attr('disabled', 'disabled');
-                $.ajax({
-                    dataType: 'json',
-                    url: thisForm.action,
-                    type: thisForm.method,
-                    data: form.serialize(),
-                    beforeSend: function () {
-                        //blockUI('Processando...');
-                    },
-                    success: function (retorno) {
-                      
-                        if (retorno.success) {
-                            myModal.modal('hide');
-                            mensagemSuccess(retorno.messages[0]);
-                            setTimeout(function(){
-                                window.location.href = retorno.url;
-                            }, 1000);
-                        } else {
-                            btnSalvar.removeAttr('disabled');
-                            mensagemWarning(retorno.messages[0]);
-                        }
-                    },
-                    error: function (erro) {
-                        btnSalvar.removeAttr('disabled');
-                        mensagemErro('Erro!');
-                    }
-                });
+
+                form.submit();
+
+            } else {
+                 mensagemWarningToast('Preencha todos os campos obrigatórios');
             }
 
         });

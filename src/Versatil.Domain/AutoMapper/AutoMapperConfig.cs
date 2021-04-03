@@ -13,6 +13,7 @@ namespace Versatil.Domain.AutoMapper
             CreateMap<Cidades, CidadesViewModel>().ReverseMap();
             CreateMap<Empresas, EmpresasViewModel>().ReverseMap();
             CreateMap<Bancos, BancosViewModel>().ReverseMap();
+            CreateMap<Funcionarios, FuncionariosViewModel>().ReverseMap();
         }
     }
 }
