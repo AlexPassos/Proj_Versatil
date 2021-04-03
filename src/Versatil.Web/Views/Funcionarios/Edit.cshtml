@@ -1,0 +1,296 @@
+@model Versatil.Domain.ViewModels.FuncionariosViewModel
+
+@{
+    Layout = null;
+}
+
+<!-- form start -->
+<form id="formCreate" asp-action="Edit" method="POST">
+
+    <div class="modal fade" id="mymodal" role="dialog" tabindex="-1" data-backdrop="static">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Editar cadastro</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <!-- TABS -->
+
+                    <div class="card card-outline card-secondary card-tabs">
+                        <div class="card-header p-0 pt-1">
+
+                            <ul class="nav nav-tabs" id="custom-tabs-one-tab" role="tablist">
+                                <li class="nav-item">
+                                    <a class="nav-link active" id="custom-tabs-one-home-tab" data-toggle="pill"
+                                        href="#custom-tabs-one-home" role="tab" aria-controls="custom-tabs-one-home"
+                                        aria-selected="true">Dados Pessoais</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" id="custom-tabs-one-profile-tab" data-toggle="pill"
+                                        href="#custom-tabs-one-profile" role="tab"
+                                        aria-controls="custom-tabs-one-profile" aria-selected="false">Informações
+                                        Adicionais</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" id="custom-tabs-one-messages-tab" data-toggle="pill"
+                                        href="#custom-tabs-one-messages" role="tab"
+                                        aria-controls="custom-tabs-one-messages" aria-selected="false">Observações</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" id="custom-tabs-one-settings-tab" data-toggle="pill"
+                                        href="#custom-tabs-one-settings" role="tab"
+                                        aria-controls="custom-tabs-one-settings" aria-selected="false">Acesso ao
+                                        Sistema</a>
+                                </li>
+                            </ul>
+
+                        </div>
+                        <div class="card-body">
+                            <!-- corpo -->
+                            <div class="tab-content" id="custom-tabs-one-tabContent">
+                                <div class="tab-pane fade active show" id="custom-tabs-one-home" role="tabpanel"
+                                    aria-labelledby="custom-tabs-one-home-tab">
+                                    <!--DADOS PESSOAIS-->
+                                    @Html.Partial("_DadosPessoais", Model)
+                                    <!--DADOS PESSOAIS-->
+                                </div>
+                                <div class="tab-pane fade" id="custom-tabs-one-profile" role="tabpanel"
+                                    aria-labelledby="custom-tabs-one-profile-tab">
+                                    <!--INFORMACOES ADICIONAIS-->
+                                    @Html.Partial("_InfoAdicionais", Model)
+                                    <!--INFORMACOES ADICIONAIS-->
+                                </div>
+                                <div class="tab-pane fade" id="custom-tabs-one-messages" role="tabpanel"
+                                    aria-labelledby="custom-tabs-one-messages-tab">
+                                    <!--OBSERVACOES-->
+                                    @Html.Partial("_Observacoes", Model)
+                                    <!--OBSERVACOES-->
+                                </div>
+                                <div class="tab-pane fade" id="custom-tabs-one-settings" role="tabpanel"
+                                    aria-labelledby="custom-tabs-one-settings-tab">
+                                    <!--ACESSO-->
+                                    @Html.Partial("_Acesso", Model)
+                                    <!--ACESSO-->
+                                </div>
+                            </div>
+                            <!-- corpo -->
+                        </div>
+
+                    </div>
+                    <!-- TABS -->
+
+                </div>
+                <div class="modal-footer justify-content-between">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+                    <button id="btnsalvar" type="button" class="btn bg-gradient-info ">Salvar</button>
+                </div>
+
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+    <!-- /.modal -->
+</form>
+
+@Html.Partial("_ValidationScriptsPartial")
+
+<script>
+    $(function () {
+
+        var form = $('#formCreate');
+        var thisForm = form[0];
+        var btnSalvar = $('#btnsalvar');
+        var myModal = $('#mymodal');
+
+        var txtMatricula = $('#id');
+        var selSituacao = $('#situacao');
+        var txtNome = $('#nome');
+        var txtCargo = $('#cargo');
+        var txtRg = $('#rg');
+        var txtNascimento = $('#nascimento');
+        var txtTelefone = $('#telefone');
+        var txtCelular = $('#celular');
+        var txtFiliacao = $('#filiacao');
+        var txtCPF = $('#cpf');
+        var selUF = $('#selUF');
+        var selCidades = $('#selCidades');
+        var txtCep = $('#cep');
+        var txtEndereco = $('#endereco');
+        var txtNumero = $('#numero');
+        var txtComplemento = $('#complemento');
+        var txtBairro = $('#bairro');
+        var txtEmail = $('#email');
+        var txtAdmissao = $('#admissao');
+        var txtDemissao = $('#demissao');
+        var txtSalario = $('#salario');
+        var txtCarteira = $('#carteira');
+        var txtPis = $('#pis');
+        var txtTitulo = $('#titulo');
+        var txtHabilitacao = $('#habilitacao');
+        var txtReservista = $('#reservista');
+        var txtObs = $('#obs');
+        var selNivel = $('#nivel');
+        var txtLogin = $('#login');
+        var txtSenha = $('#senha');
+        var txtConfirmar = $('#confirmar');
+
+        var txtData = $('#data');
+        txtData.val(fnData());
+
+        selNivel.attr('disabled', 'disabled')
+        txtLogin.attr('disabled', 'disabled')
+        txtSenha.attr('disabled', 'disabled')
+        txtConfirmar.attr('disabled', 'disabled')
+
+        var chkAcesso = $('#acesso');
+        if (chkAcesso.prop('checked')) {
+            selNivel.removeAttr('disabled');
+            txtLogin.removeAttr('disabled');
+            txtSenha.removeAttr('disabled');
+            selNivel.removeAttr('disabled');
+            txtConfirmar.removeAttr('disabled');
+        } else {
+            selNivel.attr('disabled', 'disabled')
+            txtLogin.attr('disabled', 'disabled')
+            txtSenha.attr('disabled', 'disabled')
+            txtConfirmar.attr('disabled', 'disabled')
+        }
+        chkAcesso.click(function () {
+            if (chkAcesso.prop('checked')) {
+                selNivel.removeAttr('disabled');
+                txtLogin.removeAttr('disabled');
+                txtSenha.removeAttr('disabled');
+                selNivel.removeAttr('disabled');
+                txtConfirmar.removeAttr('disabled');
+            } else {
+                selNivel.attr('disabled', 'disabled')
+                txtLogin.attr('disabled', 'disabled')
+                txtSenha.attr('disabled', 'disabled')
+                txtConfirmar.attr('disabled', 'disabled')
+            }
+        });
+
+        //Initialize Elements
+        $('#selUF').select2({
+            language: {
+                noResults: function () {
+                    return "Selecione...";
+                }
+            }
+        });
+        $('#selCidades').select2({
+            language: {
+                noResults: function () {
+                    return "Selecione...";
+                }
+            }
+        });
+        txtSalario.inputmask('currency', {
+            "autoUnmask": true,
+            radixPoint: ",",
+            groupSeparator: ".",
+            allowMinus: false,
+            prefix: 'R$ ',
+            digits: 2,
+            digitsOptional: false,
+            rightAlign: true,
+            unmaskAsNumber: true
+        });
+        txtSalario.val(0);
+        $(':input').inputmask()
+
+        //Consultar CEP
+        txtCep.blur(function () {
+
+            if (txtCep.val() == '') {
+                mensagemWarningToast("Digite o CEP para consultar");
+                return false;
+            }
+
+            var cep = txtCep.val().replace(".", "").replace("-", "");
+            var url = 'https://viacep.com.br/ws/' + cep + '/json/';
+
+            $.ajax({
+                dataType: 'json',
+                url: url,
+                type: 'GET',
+                success: function (retorno) {
+
+                    txtEndereco.val(retorno.logradouro);
+                    txtNumero.val('');
+                    txtComplemento.val('');
+                    txtBairro.val(retorno.bairro);
+
+                    setTimeout(function () {
+
+                        var url = '/funcionarios/CepCidade/';
+
+                        $.ajax({
+                            dataType: 'json',
+                            url: url,
+                            type: 'POST',
+                            data: { codibge: retorno.ibge },
+                            success: function (data) {
+                                selUF.val(data.ufID).trigger('change');
+
+                                setTimeout(function () {
+                                    selCidades.val(data.id).trigger('change');
+                                }, 500)
+                            }
+                        });
+
+                    }, 500);
+
+                },
+                error: function (erro) {
+                    mensagemErro('Erro!');
+                }
+            });
+        });
+
+        selUF.change(function () {
+
+            var url = '/funcionarios/DropdownCidades/';
+
+            $.ajax({
+                dataType: 'json',
+                url: url,
+                type: 'POST',
+                data: { idestado: selUF.val() },
+                success: function (data) {
+                    selCidades.empty();
+                    selCidades.append('<option value>Selecione...</option>');
+                    $.each(data, function (index, element) {
+                        selCidades.append('<option value="' + element.id + '">' + element.nome + '</option>');
+                    });
+                }
+            });
+        });
+
+        btnSalvar.click(function () {
+
+            if (txtSenha.val() != txtConfirmar.val()) {
+                mensagemWarning('Ops! A senha digitada não conferi.');
+                return false;
+            }
+
+            if (form.valid()) {
+                btnSalvar.attr('disabled', 'disabled');
+                txtSalario.inputmask('remove');
+
+                form.submit();
+
+            } else {
+                mensagemWarningToast('Preencha todos os campos obrigatórios');
+            }
+
+        });
+
+    });
+</script>

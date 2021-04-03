@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.Extensions.Logging;
 using SmartBreadcrumbs.Attributes;
+using Versatil.Domain.Interfaces;
 using Versatil.Domain.Interfaces.Services;
 using Versatil.Domain.ViewModels;
 using Versatil.Web.Models;
@@ -18,11 +19,12 @@ namespace Versatil.Web.Controllers
         private readonly ICidadesService _cidadesService;
 
         public EmpresasController(
+            INotificador notificador,
+            IUser user,
             ILogger<EmpresasController> logger,
             IUfService ufService,
             ICidadesService cidadesService,
-            IEmpresasService empresasService
-            )
+            IEmpresasService empresasService) : base(notificador, user)
         {
             _logger = logger;
             _ufService = ufService;
@@ -51,13 +53,7 @@ namespace Versatil.Web.Controllers
         public async Task<IActionResult> Create(EmpresasViewModel viewModel)
         {
 
-            var jsonRetorno = new JsonRetorno();
-
-            if (!ModelState.IsValid)
-            {
-                jsonRetorno.Messages = GetErrosModelState();
-                return Json(jsonRetorno);
-            }
+            //var jsonRetorno = new JsonRetorno();
 
             if (ModelState.IsValid)
             {
@@ -79,18 +75,13 @@ namespace Versatil.Web.Controllers
 
                 await _empresasService.Salvar(model);
 
-                //TempData["Success"] = "Operação realizada com sucesso";
-                jsonRetorno.Success = true;
-                jsonRetorno.url = Url.Action("Index", "Empresas");
-                jsonRetorno.Messages.Add("Operação realizada com sucesso");
-
-                //return RedirectToAction(nameof(Index), jsonRetorno);
-                return Json(jsonRetorno);
+                TempData["Success"] = "Operação realizada com sucesso";
+                return RedirectToAction(nameof(Index));
 
             }
 
-            jsonRetorno.Messages = GetErrosModelState();
-            return Json(jsonRetorno);
+            TempData["Error"] = "Ops! Falha na solicitação da requisição.";
+            return RedirectToAction(nameof(Index));
         }
 
         [HttpGet]
@@ -108,14 +99,6 @@ namespace Versatil.Web.Controllers
         public async Task<IActionResult> Edit(EmpresasViewModel viewModel)
         {
 
-            var jsonRetorno = new JsonRetorno();
-
-            if (!ModelState.IsValid)
-            {
-                jsonRetorno.Messages = GetErrosModelState();
-                return Json(jsonRetorno);
-            }
-
             if (ModelState.IsValid)
             {
                 // var model = new EmpresasViewModel();
@@ -125,16 +108,13 @@ namespace Versatil.Web.Controllers
 
                 await _empresasService.Update(viewModel);
 
-                jsonRetorno.Success = true;
-                jsonRetorno.url = Url.Action("Index", "Empresas");
-                jsonRetorno.Messages.Add("Operação realizada com sucesso");
-
-                return Json(jsonRetorno);
+                TempData["Success"] = "Operação realizada com sucesso";
+                return RedirectToAction(nameof(Index));
 
             }
 
-            jsonRetorno.Messages = GetErrosModelState();
-            return Json(jsonRetorno);
+            TempData["Error"] = "Ops! Falha na solicitação da requisição.";
+            return RedirectToAction(nameof(Index));
         }
 
         [HttpDelete]
@@ -171,7 +151,8 @@ namespace Versatil.Web.Controllers
 
         }
 
-        public async Task<JsonResult> CepCidade(string codibge){
+        public async Task<JsonResult> CepCidade(string codibge)
+        {
             var cidade = await _cidadesService.GetCidadeIbge(codibge);
             return Json(cidade);
         }

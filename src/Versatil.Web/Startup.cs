@@ -39,11 +39,7 @@ namespace Versatil.Web
             services.Configure<RouteOptions>(options => options.LowercaseUrls = true);
 
             services.AddControllersWithViews()
-                .AddCookieTempDataProvider()
-                .AddFluentValidation(opt => {
-                    opt.RegisterValidatorsFromAssemblyContaining<Startup>();
-                    opt.LocalizationEnabled = true;
-                });
+                .AddCookieTempDataProvider();
 
              //Inicializa dependencias
             services.Register(Configuration);  

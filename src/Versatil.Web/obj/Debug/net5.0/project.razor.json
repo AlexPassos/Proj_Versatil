@@ -13597,6 +13597,23 @@
         }
       },
       {
+        "HashCode": -1713800180,
+        "Kind": "MVC.ViewComponent",
+        "Name": "__Generated__SummaryViewComponentTagHelper",
+        "AssemblyName": "Versatil.Web",
+        "CaseSensitive": false,
+        "TagMatchingRules": [
+          {
+            "TagName": "vc:summary"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "ITagHelper",
+          "Common.TypeName": "__Generated__SummaryViewComponentTagHelper",
+          "MVC.ViewComponent.Name": "Summary"
+        }
+      },
+      {
         "HashCode": 1912741130,
         "Kind": "Components.Bind",
         "Name": "Bind",
@@ -15685,8 +15702,28 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "d:\\Projetos_AspNetCore\\Proj_Versatil\\src\\Versatil.Web\\Views\\Funcionarios\\_Observacoes.cshtml",
+      "TargetPath": "Views\\Funcionarios\\_Observacoes.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\Projetos_AspNetCore\\Proj_Versatil\\src\\Versatil.Web\\Views\\Funcionarios\\_InfoAdicionais.cshtml",
+      "TargetPath": "Views\\Funcionarios\\_InfoAdicionais.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\Projetos_AspNetCore\\Proj_Versatil\\src\\Versatil.Web\\Views\\Funcionarios\\Index.cshtml",
+      "TargetPath": "Views\\Funcionarios\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "d:\\Projetos_AspNetCore\\Proj_Versatil\\src\\Versatil.Web\\Views\\Shared\\_Header.cshtml",
       "TargetPath": "Views\\Shared\\_Header.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\Projetos_AspNetCore\\Proj_Versatil\\src\\Versatil.Web\\Views\\Shared\\_LayoutError.cshtml",
+      "TargetPath": "Views\\Shared\\_LayoutError.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -15700,6 +15737,16 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "d:\\Projetos_AspNetCore\\Proj_Versatil\\src\\Versatil.Web\\Views\\Shared\\ErrorAccessDenied.cshtml",
+      "TargetPath": "Views\\Shared\\ErrorAccessDenied.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\Projetos_AspNetCore\\Proj_Versatil\\src\\Versatil.Web\\Views\\Funcionarios\\_Acesso.cshtml",
+      "TargetPath": "Views\\Funcionarios\\_Acesso.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "d:\\Projetos_AspNetCore\\Proj_Versatil\\src\\Versatil.Web\\Views\\Shared\\_Sidebar.cshtml",
       "TargetPath": "Views\\Shared\\_Sidebar.cshtml",
       "FileKind": "mvc"
@@ -15707,6 +15754,11 @@
     {
       "FilePath": "d:\\Projetos_AspNetCore\\Proj_Versatil\\src\\Versatil.Web\\Views\\Shared\\_FooterPage.cshtml",
       "TargetPath": "Views\\Shared\\_FooterPage.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\Projetos_AspNetCore\\Proj_Versatil\\src\\Versatil.Web\\Views\\Shared\\ErrorNotFound.cshtml",
+      "TargetPath": "Views\\Shared\\ErrorNotFound.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -15720,13 +15772,28 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "d:\\Projetos_AspNetCore\\Proj_Versatil\\src\\Versatil.Web\\Views\\Shared\\Components\\Summary\\Default.cshtml",
+      "TargetPath": "Views\\Shared\\Components\\Summary\\Default.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "d:\\Projetos_AspNetCore\\Proj_Versatil\\src\\Versatil.Web\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
       "TargetPath": "Views\\Shared\\_ValidationScriptsPartial.cshtml",
       "FileKind": "mvc"
     },
     {
+      "FilePath": "d:\\Projetos_AspNetCore\\Proj_Versatil\\src\\Versatil.Web\\Views\\Funcionarios\\_DadosPessoais.cshtml",
+      "TargetPath": "Views\\Funcionarios\\_DadosPessoais.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "d:\\Projetos_AspNetCore\\Proj_Versatil\\src\\Versatil.Web\\Views\\Shared\\_Layout copy.cshtml",
       "TargetPath": "Views\\Shared\\_Layout copy.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\Projetos_AspNetCore\\Proj_Versatil\\src\\Versatil.Web\\Views\\Funcionarios\\Edit.cshtml",
+      "TargetPath": "Views\\Funcionarios\\Edit.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -15740,8 +15807,28 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "d:\\Projetos_AspNetCore\\Proj_Versatil\\src\\Versatil.Web\\Views\\Funcionarios\\Create.cshtml",
+      "TargetPath": "Views\\Funcionarios\\Create.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "d:\\Projetos_AspNetCore\\Proj_Versatil\\src\\Versatil.Web\\Views\\Empresas\\_IndexResult.cshtml",
       "TargetPath": "Views\\Empresas\\_IndexResult.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\Projetos_AspNetCore\\Proj_Versatil\\src\\Versatil.Web\\Views\\Shared\\_LayoutLogin.cshtml",
+      "TargetPath": "Views\\Shared\\_LayoutLogin.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\Projetos_AspNetCore\\Proj_Versatil\\src\\Versatil.Web\\Views\\Funcionarios\\_IndexResult.cshtml",
+      "TargetPath": "Views\\Funcionarios\\_IndexResult.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\Projetos_AspNetCore\\Proj_Versatil\\src\\Versatil.Web\\Views\\Funcionarios\\accordion.cshtml",
+      "TargetPath": "Views\\Funcionarios\\accordion.cshtml",
       "FileKind": "mvc"
     },
     {

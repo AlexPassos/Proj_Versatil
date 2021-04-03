@@ -1,0 +1,322 @@
+@model Versatil.Domain.ViewModels.FuncionariosViewModel
+
+@{
+    Layout = null;
+}
+
+@Html.Partial("_ValidationScriptsPartial")
+
+<!-- form start -->
+<form id="formCreate" action="@Url.Action("Create")" method="POST" data-toggle="validator" role="form">
+    <div class="modal fade" id="mymodal" role="dialog" tabindex="-1" data-backdrop="static">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Novo cadastro</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <!-- ACCORDION -->
+                    <div id="accordion">
+                        <div class="card card-outline card-secondary">
+                            <div class="card-header" id="headingOne" data-toggle="collapse" data-target="#collapseOne"
+                                        aria-expanded="true" aria-controls="collapseOne">
+                              <h3 class="card-title">Dados pessoais</h3>
+                                  
+                            </div>
+
+                            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
+                                data-parent="#accordion">
+                                <div class="card-body">
+                                   <!--dddd-->
+                                     <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label asp-for="id" class="control-label text-sm"></label>
+                            <input asp-for="id" class="form-control" readonly />
+                            <span asp-validation-for="id" class="text-danger text-xs"></span>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label asp-for="data" class="control-label text-sm"></label>
+                            <input asp-for="data" class="form-control" readonly />
+                            <span asp-validation-for="data" class="text-danger text-xs"></span>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group col-md-3">
+                            <label asp-for="situacao" class="control-label text-sm"></label>
+                            <input asp-for="situacao" class="form-control" />
+                            <span asp-validation-for="situacao" class="text-danger text-xs"></span>
+                        </div>
+                        <div class="form-group col-md-3">
+                            <label asp-for="nome" class="control-label text-sm"></label>
+                            <input asp-for="nome" class="form-control" />
+                            <span asp-validation-for="nome" class="text-danger text-xs"></span>
+                        </div>
+                        <div class="form-group col-md-3">
+                            <label asp-for="telefone" class="control-label text-sm"></label>
+                            <input asp-for="telefone" class="form-control" data-inputmask="'mask': '(99) 99999-9999'" />
+                            <span asp-validation-for="telefone" class="text-danger text-xs"></span>
+                        </div>
+                        <div class="form-group col-md-3">
+                            <label asp-for="celular" class="control-label text-sm"></label>
+                            <input asp-for="celular" class="form-control" data-inputmask="'mask': '(99) 9999-9999'" />
+                            <span asp-validation-for="celular" class="text-danger text-xs"></span>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group col-md-2">
+                            <label asp-for="cep" class="control-label text-sm"></label>
+                            <input asp-for="cep" class="form-control" data-inputmask="'mask': '99.999-999'" />
+                            <span asp-validation-for="cep" class="text-danger text-xs"></span>
+                        </div>
+                        <div class="form-group col-md-5">
+                            <label asp-for="endereco" class="control-label text-sm"></label>
+                            <input asp-for="endereco" class="form-control" />
+                            <span asp-validation-for="endereco" class="text-danger text-xs"></span>
+                        </div>
+                        <div class="form-group col-md-2">
+                            <label asp-for="numero" class="control-label text-sm"></label>
+                            <input asp-for="numero" class="form-control" />
+                            <span asp-validation-for="numero" class="text-danger text-xs"></span>
+                        </div>
+                        <div class="form-group col-md-3">
+                            <label asp-for="complemento" class="control-label text-sm"></label>
+                            <input asp-for="complemento" class="form-control" />
+                            <span asp-validation-for="complemento" class="text-danger text-xs"></span>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group col-md-3">
+                            <label asp-for="bairro" class="control-label text-sm"></label>
+                            <input asp-for="bairro" class="form-control" />
+                            <span asp-validation-for="bairro" class="text-danger text-xs"></span>
+                        </div>
+                        <div class="form-group col-md-2">
+                            <label asp-for="ufID" class="control-label text-sm"></label>
+                            <select id="selUF" asp-for="ufID" class="form-control"
+                                asp-items="@ViewBag.Estados"></select>
+                            <span asp-validation-for="ufID" class="text-danger text-xs"></span>
+                        </div>
+                        <div class="form-group col-md-3">
+                            <label asp-for="cidadeID" class="control-label text-sm"></label>
+                            <select id="selCidades" asp-for="cidadeID" class="form-control"></select>
+                            <span asp-validation-for="cidadeID" class="text-danger text-xs"></span>
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label asp-for="email" class="control-label text-sm"></label>
+                            <input asp-for="email" class="form-control" />
+                            <span asp-validation-for="email" class="text-danger text-xs"></span>
+                        </div>
+                    </div>
+                                   <!--dddd-->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header collapsed" id="headingTwo" data-toggle="collapse"
+                                        data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                               
+                                        Collapsible Group Item #2
+                                 
+                            </div>
+                            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
+                                data-parent="#accordion">
+                                <div class="card-body">
+                                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry
+                                    richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor
+                                    brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt
+                                    aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et.
+                                    Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente
+                                    ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer
+                                    farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them
+                                    accusamus labore sustainable VHS.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header collapsed" id="headingThree" data-toggle="collapse"
+                                        data-target="#collapseThree" aria-expanded="false"
+                                        aria-controls="collapseThree">
+                              
+                                        Collapsible Group Item #3
+                                 
+                            </div>
+                            <div id="collapseThree" class="collapse" aria-labelledby="headingThree"
+                                data-parent="#accordion">
+                                <div class="card-body">
+                                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry
+                                    richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor
+                                    brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt
+                                    aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et.
+                                    Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente
+                                    ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer
+                                    farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them
+                                    accusamus labore sustainable VHS.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ACCORDION -->
+
+                </div>
+                <div class="modal-footer justify-content-between">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+                    <button id="btnsalvar" type="button" class="btn bg-gradient-info ">Salvar</button>
+                </div>
+
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+    <!-- /.modal -->
+</form>
+
+<script>
+    $(function () {
+
+        var form = $('#formCreate');
+        var thisForm = form[0];
+        var btnSalvar = $('#btnsalvar');
+        var myModal = $('#mymodal');
+        var txtDescricao = $('#txtdescricao');
+        var selUF = $('#selUF');
+        var selCidades = $('#selCidades');
+        var txtCep = $('#cep');
+        var txtEndereco = $('#endereco');
+        var txtNumero = $('#numero');
+        var txtComplemento = $('#complemento');
+        var txtBairro = $('#bairro');
+
+        //Initialize Elements
+        $('#selUF').select2({
+            language: {
+                noResults: function () {
+                    return "Selecione...";
+                }
+            }
+        });
+        $('#selCidades').select2({
+            language: {
+                noResults: function () {
+                    return "Selecione...";
+                }
+            }
+        });
+        $(':input').inputmask()
+
+        //Consultar CEP
+        txtCep.blur(function () {
+
+            if (txtCep.val() == '') {
+                mensagemWarningToast("Digite o CEP para consultar");
+                return false;
+            }
+
+            var cep = txtCep.val().replace(".", "").replace("-", "");
+            var url = 'https://viacep.com.br/ws/' + cep + '/json/';
+
+            $.ajax({
+                dataType: 'json',
+                url: url,
+                type: 'GET',
+                success: function (retorno) {
+
+                    txtEndereco.val(retorno.logradouro);
+                    txtNumero.val('');
+                    txtComplemento.val('');
+                    txtBairro.val(retorno.bairro);
+
+                    setTimeout(function () {
+
+                        var url = '/empresas/CepCidade/';
+
+                        $.ajax({
+                            dataType: 'json',
+                            url: url,
+                            type: 'POST',
+                            data: { codibge: retorno.ibge },
+                            success: function (data) {
+                                selUF.val(data.ufID).trigger('change');
+
+                                setTimeout(function () {
+                                    selCidades.val(data.id).trigger('change');
+                                }, 500)
+                            }
+                        });
+
+                    }, 500);
+
+                },
+                error: function (erro) {
+                    mensagemErro('Erro!');
+                }
+            });
+        });
+
+        selUF.change(function () {
+
+            var url = '/empresas/DropdownCidades/';
+
+            $.ajax({
+                dataType: 'json',
+                url: url,
+                type: 'POST',
+                data: { idestado: selUF.val() },
+                success: function (data) {
+                    selCidades.empty();
+                    selCidades.append('<option value>Selecione...</option>');
+                    $.each(data, function (index, element) {
+                        selCidades.append('<option value="' + element.id + '">' + element.nome + '</option>');
+                    });
+                }
+            });
+        });
+
+        btnSalvar.click(function () {
+
+            if (!form.valid()) {
+                mensagemWarningToast('Preencha todos os campos obrigatórios');
+            }
+
+            if (form.valid()) {
+                btnSalvar.attr('disabled', 'disabled');
+                $.ajax({
+                    dataType: 'json',
+                    url: thisForm.action,
+                    type: thisForm.method,
+                    data: form.serialize(),
+                    beforeSend: function () {
+                        //blockUI('Processando...');
+                    },
+                    success: function (retorno) {
+
+                        if (retorno.success) {
+                            myModal.modal('hide');
+                            mensagemSuccess(retorno.messages[0]);
+                            setTimeout(function () {
+                                window.location.href = retorno.url;
+                            }, 1000);
+                        } else {
+                            btnSalvar.removeAttr('disabled');
+                            mensagemWarning(retorno.messages[0]);
+                        }
+                    },
+                    error: function (erro) {
+                        btnSalvar.removeAttr('disabled');
+                        mensagemErro('Erro!');
+                    }
+                });
+
+            }
+
+        });
+
+    });
+</script>

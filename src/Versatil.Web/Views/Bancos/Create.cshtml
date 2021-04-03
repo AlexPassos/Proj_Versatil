@@ -7,7 +7,8 @@
  @Html.Partial("_ValidationScriptsPartial")
 
 <!-- form start -->
-<form id="formCreate" action="@Url.Action("Create")" method="POST" data-toggle="validator" role="form">
+@* <form id="formCreate" action="@Url.Action("Create")" method="POST" data-toggle="validator" role="form"> *@
+<form id="formCreate" asp-action="Create" method="POST" >
     <div class="modal fade" id="mymodal" role="dialog" tabindex="-1" data-backdrop="static">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -23,7 +24,7 @@
 
                     <div class="form-group">
                         <label asp-for="descricao" class="control-label"></label>
-                        <input id="txtdescricao" asp-for="descricao" class="form-control" />
+                        <input id="txtdescricao" asp-for="descricao" class="form-control form-control-sm" />
                         <span asp-validation-for="descricao" class="text-danger text-sm"></span>
                     </div>
 
@@ -59,13 +60,12 @@
 
         btnSalvar.click(function () {
 
-            if (!form.valid()){
-                mensagemWarningToast('Preencha todos os campos obrigatórios');
-            }
-
             if (form.valid()) {
                 btnSalvar.attr('disabled', 'disabled');
-                $.ajax({
+
+                form.submit();
+                
+                /*$.ajax({
                     dataType: 'json',
                     url: thisForm.action,
                     type: thisForm.method,
@@ -90,7 +90,7 @@
                         btnSalvar.removeAttr('disabled');
                         mensagemErro('Erro!');
                     }
-                });
+                });*/
                 /*.done(function (data) {
                     console.log(data);
                     if (data.success) {
@@ -104,6 +104,8 @@
                     btnSalvar.removeAttr('disabled');
                     mensagemErro('Erro!!!');
                 });*/
+            } else {
+                   mensagemWarningToast('Preencha todos os campos obrigatórios');
             }
 
         });

@@ -1,0 +1,42 @@
+@model Versatil.Domain.ViewModels.FuncionariosViewModel
+
+
+<div class="form-group"> 
+    <div class="icheck-primary d-inline">
+                        <input asp-for="acesso" type="checkbox">
+                        <label asp-for="acesso">
+                        </label>
+                      </div>
+</div>
+
+<div class="form-row">
+    <div class="form-group col-sm-3">
+        <label asp-for="nivel" class="control-label text-sm"></label>
+        <select asp-for="nivel" class="form-control form-control-sm">
+            <option value="Usuario">Usuário</option>
+            <option value="Administrador">Administrador</option>
+        </select>
+        <span asp-validation-for="nivel" class="text-danger text-xs"></span>
+    </div>
+</div>
+
+<div class="form-row">
+
+    <div class="form-group col-sm-4">
+        <label asp-for="login" class="control-label text-sm"></label>
+        <input asp-for="login" class="form-control form-control-sm" />
+        <span asp-validation-for="login" class="text-danger text-xs"></span>
+    </div>
+    <div class="form-group col-sm-4">
+        <label asp-for="senha" class="control-label text-sm"></label>
+        <input type="password" asp-for="senha" value="@Model.senha" class="form-control form-control-sm" />
+        <span asp-validation-for="senha" class="text-danger text-xs"></span>
+    </div>
+    <div class="form-group col-sm-4">
+        <label asp-for="confirmar" class="control-label text-sm"></label>
+        <input type="password" asp-for="confirmar" value="@Model.senha" class="form-control form-control-sm" />
+        <span asp-validation-for="confirmar" class="text-danger text-xs"></span>
+    </div>
+
+
+</div>

@@ -1,0 +1,43 @@
+﻿@{
+  //  var user = this.GetUserCustom();
+   // bool isEnvironmentDev = this.IsEnvironmentDev();
+}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>@ViewData["Title"] @ViewData["Module"] - AdminCaixa</title>
+
+    <link rel="shortcut icon" href="~/themes/default/img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="~/themes/default/img/favicon.ico" type="image/x-icon">
+
+    <link href="~/bundles/styles-plugins.bundle.min.css" rel="stylesheet" asp-append-version="true" />
+    <link href="~/bundles/styles-theme.bundle.min.css" rel="stylesheet" asp-append-version="true">
+    <link href="~/bundles/styles-global.bundle.min.css" rel="stylesheet" asp-append-version="true">
+
+    @RenderSection("Styles", required: false)
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-caixa mb-4 shadow">
+        <a class="navbar-brand" asp-action="Index" asp-controller="Home">
+            <img src="~/themes/default/img/logo-caixa.png" alt="Logo Caixa"> &nbsp;&nbsp;&nbsp; <span>AdminCaixa</span>
+        </a>
+        @* @if (isEnvironmentDev)
+        {
+            <text>&nbsp; &nbsp;</text>
+            <span class="text-warning font-weight-bold">{Ambiente de Desenvolvimento/Homologação}</span>
+        } *@
+    </nav>
+    <div class="container">
+        @RenderBody()
+    </div>
+
+    @{await Html.RenderPartialAsync("_WarningSectionPartial");}
+
+    <script src="~/bundles/scripts-plugins.bundle.min.js" asp-append-version="true"></script>
+
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

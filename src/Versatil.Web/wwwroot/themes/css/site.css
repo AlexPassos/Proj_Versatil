@@ -18,3 +18,18 @@
   width: 25px !important;
 }
 
+.colSituacao{
+  width: 30px !important;
+}
+
+.colData{
+  width: 40px !important;
+}
+
+.form-group {
+  margin-bottom: 0.1rem !important;
+}
+
+label {
+  margin-bottom: 0.2rem !important;
+}
