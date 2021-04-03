@@ -1,0 +1,136 @@
+@model IEnumerable<Versatil.Domain.ViewModels.SetoresViewModel>
+
+@{
+    ViewData["Title"] = "Cadastro de setores";
+}
+
+<div class="containerPage">
+    <div class="card card-info card-outline">
+        <div class="card-header">
+            <h3 class="card-title">Lista de setores</h3>
+            <div class="card-tools">
+                <button class="btn bg-gradient-info btn-sm btncadastro" 
+                    data-url="@Url.Action("Create")" data-loading-text="...">
+                   Novo cadastro
+                </button>
+            </div>
+        </div>
+        <div class="card-body">
+            @Html.Partial("_IndexResult", Model)
+        </div>
+    </div>
+</div>
+
+  
+  <div id="modal-content"></div>
+
+@section scripts{
+    <script>
+        jQuery(function ($){
+
+            var element = $(this);
+            element.button('loading');
+            var btnCadastro = $('.btncadastro');
+            var btnEditar = $('.btneditar');
+            var btnExcluir = $('.btnexcluir');
+
+            btnCadastro.click(function(){
+                var url = $(this).attr('data-url');
+
+                $('#modal-content').load(url, function(response, status){
+                    element.button('reset');
+
+                    if (status == 'success'){
+                        $('#mymodal').modal('show');
+                    }
+
+                    if (status == 'error'){
+                        toastr.options = {
+                            "closeButton": true,
+                            "timeOut": '10000',
+                            "positionClass": "toast-bottom-right"
+                        }
+                        toastr["error"]("Ocorreu um erro na requisição");
+                    }
+                });
+            });
+
+            btnEditar.click(function(){
+                var url = $(this).attr('data-url');
+
+                $('#modal-content').load(url, function(response, status){
+                    element.button('reset');
+
+                    if (status == 'success'){
+                        $('#mymodal').modal('show');
+                    }
+
+                    if (status == 'error'){
+                        toastr.options = {
+                            "closeButton": true,
+                            "timeOut": '10000',
+                            "positionClass": "toast-bottom-right"
+                        }
+                        toastr["error"]("Ocorreu um erro na requisição");
+                    }
+                });
+            });
+
+            btnExcluir.click(function(){
+                var url = $(this).attr('data-url');
+                var dataNome = $(this).attr('data-nome');
+                var title = 'Atenção';
+                var texto = 'Deseja excluir o setor ' + dataNome + '?';
+
+                confirmacaoExclusao(url, title, texto);
+
+            });
+
+            $('.dataTable').DataTable({
+               ordering: true,
+               responsive: true,
+               searching: false,
+               lengthChange: false,
+               info: true,
+               autoWidth: true,
+               paging: true,
+               pageLength: 10,
+               fnInitComplete: function(){
+                   $('#table-data').show();
+                   $('.overlay').hide();
+               },
+               language: {
+                   "sEmptyTable": "Nenhum registro encontrado",
+                   "sInfo": "Mostrando de _START_ até _END_ de _TOTAL_ registros",
+                   "sInfoEmpty": "Mostrando 0 até 0 de 0 registros",
+                   "sInfoFiltered": "(Filtrados de _MAX_ registros)",
+                   "sInfoPostFix": "",
+                   "sInfoThousands": ".",
+                   "lengthMenu": '<select>'+
+			             '<option value="5">5</option>'+
+			             '<option value="10">10</option>'+
+			             '<option value="20">20</option>'+
+			             '<option value="30">30</option>'+
+			             '<option value="40">40</option>'+
+			             '<option value="50">50</option>'+
+			             '<option value="-1">Todos</option>'+
+			             '</select>  Resultados por página',
+                   "sLoadingRecords": "Carregando...",
+                   "sProcessing": "Processando...",
+                   "sZeroRecords": "Nenhum registro encontrado",
+                   "sSearch": "Pesquisar",
+                   "oPaginate": {
+                       "sNext": "Próximo",
+                       "sPrevious": "Anterior",
+                       "sFirst": "Primeiro",
+                       "sLast": "Último"
+                   },
+                   "oAria": {
+                       "sSortAscendind": ": Ordenar colunas de forma ascendente",
+                       "sSortDescending": ": Ordenar colunas de forma descendente"
+                   }
+               }
+            });
+        });
+    </script>
+}
