@@ -3,18 +3,22 @@ using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
 using Versatil.Domain.Entities;
+using Versatil.Domain.Interfaces;
 using Versatil.Domain.Interfaces.Repositories;
 using Versatil.Domain.Interfaces.Services;
 
 namespace Versatil.Domain.Services
 {
-    public class CidadesService : ICidadesService
+    public class CidadesService : BaseService, ICidadesService
     {
 
         private readonly IMapper _mapper;
         private readonly ICidadesRepository _cidadesRepository;
 
-        public CidadesService(IMapper mapper, ICidadesRepository cidadesRepository)
+        public CidadesService(INotificador notificador,
+                              IUser user,
+                              IMapper mapper,
+                              ICidadesRepository cidadesRepository) : base(notificador, user)
         {
             _mapper = mapper;
             _cidadesRepository = cidadesRepository;

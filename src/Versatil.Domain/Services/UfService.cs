@@ -3,18 +3,22 @@ using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
 using Versatil.Domain.Entities;
+using Versatil.Domain.Interfaces;
 using Versatil.Domain.Interfaces.Repositories;
 using Versatil.Domain.Interfaces.Services;
 
 namespace Versatil.Domain.Services
 {
-    public class UfService : IUfService
+    public class UfService : BaseService, IUfService
     {
 
         private readonly IMapper _mapper;
         private readonly IUfRepository _ufRepository;
 
-        public UfService(IMapper mapper, IUfRepository ufRepository)
+        public UfService(INotificador notificador,
+                         IUser user,
+                         IMapper mapper,
+                         IUfRepository ufRepository) : base(notificador, user)
         {
             _mapper = mapper;
             _ufRepository = ufRepository;

@@ -15772,6 +15772,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "d:\\Projetos_AspNetCore\\Proj_Versatil\\src\\Versatil.Web\\Views\\Marcas\\Index.cshtml",
+      "TargetPath": "Views\\Marcas\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "d:\\Projetos_AspNetCore\\Proj_Versatil\\src\\Versatil.Web\\Views\\Shared\\Components\\Summary\\Default.cshtml",
       "TargetPath": "Views\\Shared\\Components\\Summary\\Default.cshtml",
       "FileKind": "mvc"
@@ -15817,6 +15822,16 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "d:\\Projetos_AspNetCore\\Proj_Versatil\\src\\Versatil.Web\\Views\\Marcas\\Edit.cshtml",
+      "TargetPath": "Views\\Marcas\\Edit.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\Projetos_AspNetCore\\Proj_Versatil\\src\\Versatil.Web\\Views\\Marcas\\Create.cshtml",
+      "TargetPath": "Views\\Marcas\\Create.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "d:\\Projetos_AspNetCore\\Proj_Versatil\\src\\Versatil.Web\\Views\\Shared\\_LayoutLogin.cshtml",
       "TargetPath": "Views\\Shared\\_LayoutLogin.cshtml",
       "FileKind": "mvc"
@@ -15824,6 +15839,11 @@
     {
       "FilePath": "d:\\Projetos_AspNetCore\\Proj_Versatil\\src\\Versatil.Web\\Views\\Funcionarios\\_IndexResult.cshtml",
       "TargetPath": "Views\\Funcionarios\\_IndexResult.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\Projetos_AspNetCore\\Proj_Versatil\\src\\Versatil.Web\\Views\\Marcas\\_IndexResult.cshtml",
+      "TargetPath": "Views\\Marcas\\_IndexResult.cshtml",
       "FileKind": "mvc"
     },
     {

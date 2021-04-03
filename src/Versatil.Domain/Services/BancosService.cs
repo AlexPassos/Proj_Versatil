@@ -4,19 +4,23 @@ using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
 using Versatil.Domain.Entities;
+using Versatil.Domain.Interfaces;
 using Versatil.Domain.Interfaces.Repositories;
 using Versatil.Domain.Interfaces.Services;
 using Versatil.Domain.ViewModels;
 
 namespace Versatil.Domain.Services
 {
-    public class BancosService : IBancosService
+    public class BancosService : BaseService,IBancosService
     {
 
         private readonly IMapper _mapper;
         private readonly IBancosRepository _bancosRepository;
 
-        public BancosService(IMapper mapper, IBancosRepository bancosRepository)
+        public BancosService(INotificador notificador,
+                             IUser user,
+                             IMapper mapper,
+                             IBancosRepository bancosRepository) : base(notificador, user)
         {
             _mapper = mapper;
             _bancosRepository = bancosRepository;

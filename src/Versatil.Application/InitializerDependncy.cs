@@ -33,6 +33,7 @@ namespace Versatil.Application
             services.AddScoped<ICidadesRepository, CidadesRepository>();
             services.AddScoped<IEmpresasRepository, EmpresasRepository>();
             services.AddScoped<IBancosRepository, BancosRepository>();
+            services.AddScoped<IMarcasRepository, MarcasRepository>();
             services.AddScoped<IFuncionariosRepository, FuncionariosRepository>();
 
             //Serives
@@ -41,6 +42,7 @@ namespace Versatil.Application
             services.AddScoped<ICidadesService, CidadesService>();
             services.AddScoped<IEmpresasService, EmpresasService>();
             services.AddScoped<IBancosService, BancosService>();
+            services.AddScoped<IMarcasService, MarcasService>();
             services.AddScoped<IFuncionariosService, FuncionariosService>();
 
             return services;
