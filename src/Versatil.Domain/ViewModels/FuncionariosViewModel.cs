@@ -14,7 +14,7 @@ namespace Versatil.Domain.ViewModels
         public DateTime data { get; set; }
 
         [Display(Name = "Situação do funcionário")]
-        public bool situacao { get; set; }
+        public bool situacao { get; set; } = true;
 
         [Required(ErrorMessage = "{0} é obrigatório.")]
         [Display(Name = "Nome completo")]
@@ -31,6 +31,7 @@ namespace Versatil.Domain.ViewModels
         [Display(Name = "RG")]
         public string rg { get; set; }
 
+        [Required(ErrorMessage = "{0} é obrigatório.")]
         [Display(Name = "CPF")]
         public string cpf { get; set; }
 

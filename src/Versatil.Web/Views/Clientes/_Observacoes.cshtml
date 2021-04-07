@@ -1,0 +1,10 @@
+@model Versatil.Domain.ViewModels.ClientesViewModel
+
+<div class="form-row">
+
+    <div class="form-group col-sm-12">
+        <label asp-for="obs" class="control-label text-sm"></label>
+        <textarea asp-for="obs" class="form-control form-control-sm" rows="8" ></textarea>
+        <span asp-validation-for="obs" class="text-danger text-xs"></span>
+    </div>
+</div>

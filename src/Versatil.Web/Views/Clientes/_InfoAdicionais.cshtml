@@ -1,0 +1,48 @@
+@model Versatil.Domain.ViewModels.ClientesViewModel
+
+<div class="form-row">
+
+    <div class="form-group col-sm-2">
+        <label asp-for="sexo" class="control-label text-sm"></label>
+        <select asp-for="sexo" class="form-control form-control-sm">
+            <option value=2>Selecione...</option>
+            <option value=1>Masculino</option>
+            <option value=0>Feminino</option>
+        </select>
+        <span asp-validation-for="sexo" class="text-danger text-xs"></span>
+    </div>
+    <div class="form-group col-sm-3">
+        <label asp-for="civil" class="control-label text-sm"></label>
+        <select asp-for="civil" class="form-control form-control-sm" 
+                asp-items="@Html.GetEnumSelectList<EstadoCivil>()">
+        </select>
+        <span asp-validation-for="civil" class="text-danger text-xs"></span>
+    </div>
+    <div class="form-group col-sm-3">
+        <label asp-for="profissaoID" class="control-label text-sm"></label>
+        <select asp-for="profissaoID" class="form-control form-control-sm"
+                asp-items="@ViewBag.Profissoes">
+                    <option disabled selected>Selecione...</option>
+        </select>
+        <span asp-validation-for="profissaoID" class="text-danger text-xs"></span>
+    </div>
+
+</div>
+
+<div class="form-row">
+
+    <div class="form-group col-sm-3" style="margin-top: 30px;">
+        <div class="icheck-primary d-inline">
+            <input   asp-for="sitlimite" />
+            <label asp-for="sitlimite"></label>
+        </div>
+    </div>
+
+    <div class="form-group col-sm-3">
+        <label asp-for="limite" class="control-label text-sm"></label>
+        <input asp-for="limite" class="form-control form-control-sm" />
+        <span asp-validation-for="limite" class="text-danger text-xs"></span>
+    </div>
+
+</div>
+

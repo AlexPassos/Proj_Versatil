@@ -6,11 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - Versatil.Web</title>
 
-    <!-- 
-        https://adminlte.io/themes/dev/AdminLTE/pages/UI/buttons.html 
+    <!--
+        https://adminlte.io/themes/dev/AdminLTE/pages/UI/buttons.html
         https://adminlte.io/docs/3.0/components/cards.html
     -->
-
     <!-- Font Awesome -->
     <link rel="stylesheet" href="~/themes/plugins/fontawesome-free/css/all.min.css">
     <!-- Ionicons -->
@@ -47,7 +46,7 @@
 
 </head>
 
-<body class="hold-transition sidebar-collapse sidebar-mini layout-fixed">
+<body class="hold-transition sidebar-collapse sidebar-mini layout-fixed layout-navbar-fixed">
 
     <div class="wrapper">
 
@@ -139,7 +138,6 @@
     <script src="~/themes/js/toasts.message.js" asp-append-version="true"></script>
     <script src="~/themes/js/confirmacao.message.js" asp-append-version="true"></script>
     <script src="~/themes/js/clsgeral.js" asp-append-version="true"></script>
-    <script src="~/themes/js/scripts.js" asp-append-version="true"></script>
 
     @await RenderSectionAsync("Scripts", required: false)
 

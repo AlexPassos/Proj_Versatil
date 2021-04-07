@@ -1,17 +1,17 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.26124.0
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31129.286
 MinimumVisualStudioVersion = 15.0.26124.0
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{E1A585C7-E4A2-446D-BC7A-1B6E1036B7D4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Versatil.Application", "src\Versatil.Application\Versatil.Application.csproj", "{20BDC4BD-3BD4-4896-9FCD-221FDA575E12}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Versatil.Application", "src\Versatil.Application\Versatil.Application.csproj", "{20BDC4BD-3BD4-4896-9FCD-221FDA575E12}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Versatil.Data", "src\Versatil.Data\Versatil.Data.csproj", "{ECF791C3-EC1E-4E34-8770-78B385CB3101}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Versatil.Data", "src\Versatil.Data\Versatil.Data.csproj", "{ECF791C3-EC1E-4E34-8770-78B385CB3101}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Versatil.Domain", "src\Versatil.Domain\Versatil.Domain.csproj", "{0DAB8BDE-60DA-43C7-8E64-B9D1ECE8B790}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Versatil.Domain", "src\Versatil.Domain\Versatil.Domain.csproj", "{0DAB8BDE-60DA-43C7-8E64-B9D1ECE8B790}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Versatil.Web", "src\Versatil.Web\Versatil.Web.csproj", "{2CFC666A-87E7-45D8-A861-692003577E3F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Versatil.Web", "src\Versatil.Web\Versatil.Web.csproj", "{2CFC666A-87E7-45D8-A861-692003577E3F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,9 +21,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 		Release|x64 = Release|x64
 		Release|x86 = Release|x86
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{20BDC4BD-3BD4-4896-9FCD-221FDA575E12}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -75,10 +72,16 @@ Global
 		{2CFC666A-87E7-45D8-A861-692003577E3F}.Release|x86.ActiveCfg = Release|Any CPU
 		{2CFC666A-87E7-45D8-A861-692003577E3F}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{20BDC4BD-3BD4-4896-9FCD-221FDA575E12} = {E1A585C7-E4A2-446D-BC7A-1B6E1036B7D4}
 		{ECF791C3-EC1E-4E34-8770-78B385CB3101} = {E1A585C7-E4A2-446D-BC7A-1B6E1036B7D4}
 		{0DAB8BDE-60DA-43C7-8E64-B9D1ECE8B790} = {E1A585C7-E4A2-446D-BC7A-1B6E1036B7D4}
 		{2CFC666A-87E7-45D8-A861-692003577E3F} = {E1A585C7-E4A2-446D-BC7A-1B6E1036B7D4}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DFD5FD74-FC0B-4DFC-8200-F6E57CE9E16C}
 	EndGlobalSection
 EndGlobal
