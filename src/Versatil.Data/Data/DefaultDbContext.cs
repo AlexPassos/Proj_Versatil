@@ -22,6 +22,8 @@ namespace Versatil.Data.Data
         public DbSet<Setores> SETORESs { get; set; }
         public DbSet<Servicos> SERVICOSs { get; set; }
         public DbSet<Funcionarios> FUNCIONARIOSs { get; set; }
+        public DbSet<Clientes> CLIENTESs { get; set; }
+        public DbSet<Profissoes> PROFISSOESs { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

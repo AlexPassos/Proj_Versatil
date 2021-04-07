@@ -15677,6 +15677,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "d:\\Projetos_AspNetCore\\Proj_Versatil\\src\\Versatil.Web\\Views\\Clientes\\_Observacoes.cshtml",
+      "TargetPath": "Views\\Clientes\\_Observacoes.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "d:\\Projetos_AspNetCore\\Proj_Versatil\\src\\Versatil.Web\\Views\\Shared\\_TitlePage.cshtml",
       "TargetPath": "Views\\Shared\\_TitlePage.cshtml",
       "FileKind": "mvc"
@@ -15694,6 +15699,11 @@
     {
       "FilePath": "d:\\Projetos_AspNetCore\\Proj_Versatil\\src\\Versatil.Web\\Views\\Shared\\_ErrorSummary.cshtml",
       "TargetPath": "Views\\Shared\\_ErrorSummary.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\Projetos_AspNetCore\\Proj_Versatil\\src\\Versatil.Web\\Views\\Clientes\\Edit.cshtml",
+      "TargetPath": "Views\\Clientes\\Edit.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -15747,6 +15757,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "d:\\Projetos_AspNetCore\\Proj_Versatil\\src\\Versatil.Web\\Views\\Clientes\\_DadosPessoais.cshtml",
+      "TargetPath": "Views\\Clientes\\_DadosPessoais.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "d:\\Projetos_AspNetCore\\Proj_Versatil\\src\\Versatil.Web\\Views\\Setores\\Create.cshtml",
       "TargetPath": "Views\\Setores\\Create.cshtml",
       "FileKind": "mvc"
@@ -15762,8 +15777,18 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "d:\\Projetos_AspNetCore\\Proj_Versatil\\src\\Versatil.Web\\Views\\Clientes\\Index.cshtml",
+      "TargetPath": "Views\\Clientes\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "d:\\Projetos_AspNetCore\\Proj_Versatil\\src\\Versatil.Web\\Views\\Funcionarios\\_Acesso.cshtml",
       "TargetPath": "Views\\Funcionarios\\_Acesso.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\Projetos_AspNetCore\\Proj_Versatil\\src\\Versatil.Web\\Views\\Clientes\\_IndexResult.cshtml",
+      "TargetPath": "Views\\Clientes\\_IndexResult.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -15822,6 +15847,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "d:\\Projetos_AspNetCore\\Proj_Versatil\\src\\Versatil.Web\\Views\\Clientes\\Create.cshtml",
+      "TargetPath": "Views\\Clientes\\Create.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "d:\\Projetos_AspNetCore\\Proj_Versatil\\src\\Versatil.Web\\Views\\Shared\\_Layout copy.cshtml",
       "TargetPath": "Views\\Shared\\_Layout copy.cshtml",
       "FileKind": "mvc"
@@ -15844,6 +15874,11 @@
     {
       "FilePath": "d:\\Projetos_AspNetCore\\Proj_Versatil\\src\\Versatil.Web\\Views\\Funcionarios\\Create.cshtml",
       "TargetPath": "Views\\Funcionarios\\Create.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\Projetos_AspNetCore\\Proj_Versatil\\src\\Versatil.Web\\Views\\Clientes\\_InfoAdicionais.cshtml",
+      "TargetPath": "Views\\Clientes\\_InfoAdicionais.cshtml",
       "FileKind": "mvc"
     },
     {

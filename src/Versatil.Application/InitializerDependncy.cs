@@ -37,6 +37,8 @@ namespace Versatil.Application
             services.AddScoped<ISetoresRepository, SetoresRepository>();
             services.AddScoped<IFuncionariosRepository, FuncionariosRepository>();
             services.AddScoped<IServicosRepository, ServicosRepository>();
+            services.AddScoped<IClientesRepository, ClientesRepository>();
+            services.AddScoped<IProfissoesRepository, ProfissoesRepository>();
 
             //Serives
             services.AddScoped<INotificador, Notificador>();
@@ -48,6 +50,7 @@ namespace Versatil.Application
             services.AddScoped<ISetoresService, SetoresService>();
             services.AddScoped<IFuncionariosService, FuncionariosService>();
             services.AddScoped<IServicosService, ServicosService>();
+            services.AddScoped<IClientesService, ClientesService>();
 
             return services;
         }
