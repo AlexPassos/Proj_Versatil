@@ -19,6 +19,7 @@ namespace Versatil.Domain.AutoMapper
             CreateMap<Servicos, ServicosViewModel>().ReverseMap();
             CreateMap<Clientes, ClientesViewModel>().ReverseMap();
             CreateMap<Profissoes, ProfissoesViewModel>().ReverseMap();
+            CreateMap<ContasDemonstrativos, ContasDemonstrativosViewModel>().ReverseMap();
         }
     }
 }

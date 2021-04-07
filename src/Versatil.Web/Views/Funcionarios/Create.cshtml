@@ -239,6 +239,23 @@
                         txtReservista.val(retorno.reservista);
                         txtObs.val(retorno.obs);
                         selUF.val(retorno.ufID).trigger('change');
+
+                        var cacesso = retorno.acesso;
+                        if (cacesso == true) {
+                            chkAcesso.attr('checked', 'checked');
+                            selNivel.removeAttr('disabled');
+                            txtLogin.removeAttr('disabled');
+                            txtSenha.removeAttr('disabled');
+                            selNivel.removeAttr('disabled');
+                            txtConfirmar.removeAttr('disabled');
+                        } else {
+                            chkAcesso.removeAttr('checked');
+                            selNivel.attr('disabled', 'disabled')
+                            txtLogin.attr('disabled', 'disabled')
+                            txtSenha.attr('disabled', 'disabled')
+                            txtConfirmar.attr('disabled', 'disabled')
+                        }
+                       
                         selNivel.val(retorno.nivel).trigger('change');
                         txtLogin.val(retorno.login);
                         txtSenha.val(retorno.senha);
