@@ -46,8 +46,10 @@ namespace Versatil.Web.Controllers
         [Breadcrumb("Cadastrar", FromAction = nameof(Index))]
         public async Task<IActionResult> Create()
         {
+            var viewModel = new FuncionariosViewModel();
+
             ViewBag.Estados = await DropdownUf();
-            return View();
+            return View(viewModel);
         }
 
         [HttpPost]
