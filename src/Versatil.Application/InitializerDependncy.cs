@@ -47,6 +47,7 @@ namespace Versatil.Application
             services.AddScoped<ICfopRepository, CfopRepository>();
             services.AddScoped<ISituacaoTributariaCofinsRepository, SituacaoTributariaCofinsRepository>();
             services.AddScoped<ISituacaoTributariaIpiRepository, SituacaoTributariaIpiRepository>();
+            services.AddScoped<ISituacaoTributariaPisRepository, SituacaoTributariaPisRepository>();
             services.AddScoped<ISituacaoTributariaRepository, SituacaoTributariaRepository>();
 
             //Serives
