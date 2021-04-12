@@ -23,6 +23,7 @@ namespace Versatil.Domain.AutoMapper
             CreateMap<ContasGrupos, ContasGruposViewModel>().ReverseMap();
             CreateMap<ContasSubgrupos, ContasSubgruposViewModel>().ReverseMap();
             CreateMap<Contas, ContasViewModel>().ReverseMap();
+            CreateMap<Unidades, UnidadesViewModel>().ReverseMap();
         }
     }
 }

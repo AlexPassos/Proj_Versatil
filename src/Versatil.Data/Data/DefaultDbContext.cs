@@ -28,6 +28,7 @@ namespace Versatil.Data.Data
         public DbSet<ContasGrupos> CONTASGRUPOSs { get; set; }
         public DbSet<ContasSubgrupos> CONTASSUBGRUPOSs { get; set; }
         public DbSet<Contas> CONTASs { get; set; }
+        public DbSet<Unidades> UNIDADESs { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

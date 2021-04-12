@@ -43,6 +43,7 @@ namespace Versatil.Application
             services.AddScoped<IContasGruposRepository, ContasGruposRepository>();
             services.AddScoped<IContasSubgruposRepository, ContasSubgruposRepository>();
             services.AddScoped<IContasRepository, ContasRepository>();
+            services.AddScoped<IUnidadesRepository, UnidadesRepository>();
 
             //Serives
             services.AddScoped<INotificador, Notificador>();
