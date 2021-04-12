@@ -47,8 +47,15 @@ using Versatil.Domain.ViewModels;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 6 "D:\Projetos_AspNetCore\Proj_Versatil\src\Versatil.Web\Views\_ViewImports.cshtml"
+using Versatil.Domain.Services;
+
+#line default
+#line hidden
+#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"79a43b57f94cb52c1fa17e60f0b30cc1738089b8", @"/Views/Shared/_TitlePage.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"f80952516e066ea2d70119ec88fa7fa8714026be", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"b443a92cfb5a11fada23b733120164fbf792a836", @"/Views/_ViewImports.cshtml")]
     public class Views_Shared__TitlePage : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     {
         #line hidden
@@ -127,7 +134,7 @@ using Versatil.Domain.ViewModels;
 #line hidden
 #nullable disable
             WriteLiteral("                    <div class=\"col-sm-6\">\r\n                        <ol class=\"breadcrumb float-sm-right\">\r\n                            <li class=\"breadcrumb-item active text-sm\">\r\n                                ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("breadcrumb", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "79a43b57f94cb52c1fa17e60f0b30cc1738089b85750", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("breadcrumb", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "79a43b57f94cb52c1fa17e60f0b30cc1738089b85943", async() => {
             }
             );
             __SmartBreadcrumbs_BreadcrumbTagHelper = CreateTagHelper<global::SmartBreadcrumbs.BreadcrumbTagHelper>();

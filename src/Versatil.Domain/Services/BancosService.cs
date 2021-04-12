@@ -52,11 +52,11 @@ namespace Versatil.Domain.Services
 
         public async Task Delete(int id)
         {
-            try{
+            //try{
                 await _bancosRepository.Delete(id);
-            } catch (Exception ex){
+            //} catch (Exception ex){
 
-            }
+            //}
         }
     }
 }
