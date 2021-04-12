@@ -5,8 +5,8 @@ namespace Versatil.Domain.ViewModels
     public class ContasDemonstrativosViewModel
     {
         public int id { get; set; }
-        
-        [Display(Name = "Demonstrativo")]
+
+        [Display(Name = "Demonstrativo de Caixa")]
         public string nome { get; set; }
         
     }

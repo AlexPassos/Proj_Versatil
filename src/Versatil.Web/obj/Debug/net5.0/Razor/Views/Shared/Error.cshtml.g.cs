@@ -47,8 +47,15 @@ using Versatil.Domain.ViewModels;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 6 "D:\Projetos_AspNetCore\Proj_Versatil\src\Versatil.Web\Views\_ViewImports.cshtml"
+using Versatil.Domain.Services;
+
+#line default
+#line hidden
+#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"af115d10f411b2f8a58d0ac8cd027cb4c6620263", @"/Views/Shared/Error.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"f80952516e066ea2d70119ec88fa7fa8714026be", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"b443a92cfb5a11fada23b733120164fbf792a836", @"/Views/_ViewImports.cshtml")]
     public class Views_Shared_Error : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("asp-action", "Index", global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
@@ -96,7 +103,7 @@ using Versatil.Domain.ViewModels;
     </p>
     <p>
         ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "af115d10f411b2f8a58d0ac8cd027cb4c66202634882", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "af115d10f411b2f8a58d0ac8cd027cb4c66202635075", async() => {
                 WriteLiteral("Voltar para início");
             }
             );

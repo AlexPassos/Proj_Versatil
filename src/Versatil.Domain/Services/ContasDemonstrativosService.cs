@@ -34,7 +34,7 @@ namespace Versatil.Domain.Services
 
         public async Task<IEnumerable<ContasDemonstrativosViewModel>> GetDemonstrativosAll()
         {
-            var dados = await _demonstrativosRepository.GetMany(x => true, expressionIncludes: null, orderBy: o => o.OrderBy(y => y.descricao));
+            var dados = await _demonstrativosRepository.GetMany(x => true, expressionIncludes: null, orderBy: o => o.OrderBy(y => y.nome));
             return _mapper.Map<IEnumerable<ContasDemonstrativosViewModel>>(dados);
         }
     }

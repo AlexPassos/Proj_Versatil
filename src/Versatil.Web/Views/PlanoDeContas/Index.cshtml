@@ -1,0 +1,242 @@
+﻿@model Versatil.Domain.ViewModels.PlanoContasViewModel
+@inject Versatil.Domain.Interfaces.Services.IContasGruposService   GruposService;
+@inject Versatil.Domain.Interfaces.Services.IContasSubgruposService   SubgruposService;
+@inject Versatil.Domain.Interfaces.Services.IContasService   ContasService;
+
+@{
+    ViewData["Title"] = "Plano de Contas";
+}
+
+<div class="containerPage">
+    <div class="card card-info card-outline">
+        <div class="card-header">
+            <h3 class="card-title">Plano de contas</h3>
+            <div class="card-tools">
+                <button class="btn bg-gradient-info btn-sm btncadastro"
+                        data-url="@Url.Action("CreateGrupo")" data-loading-text="...">
+                    Cadastrar grupo
+                </button>           
+                <button class="btn bg-gradient-info btn-sm btncadastro"
+                        data-url="@Url.Action("CreateSubgrupo")" data-loading-text="...">
+                    Cadastrar subgrupo
+                </button>           
+                <button class="btn bg-gradient-info btn-sm btncadastro"
+                        data-url="@Url.Action("CreateContas")" data-loading-text="...">
+                    Cadastrar contas
+                </button>
+            </div>
+        </div>
+        <div class="card-body">
+
+            <div class="card elevation-1">
+                <div class="card-header">
+                    <h3 class="card-title">1 - @Model.Demonstrativo.nome</h3>
+                    <div class="card-tools">
+                        <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
+                            <i class="fas fa-minus"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="card-body" style="display: block; padding: 0px 0px 0px 20px">
+                    <!--GRUPOS-->
+                    @foreach (var Grupos in GruposService.GetGruposAll(1))
+                    {
+                        <div class="card elevation-0">
+                            <div class="card-header">
+                                <h3 class="card-title">1.@Grupos.codigo - @Grupos.nome</h3>
+
+                                <div class="card-tools">
+                                    <button type="button" class="btn btn-tool btneditar"
+                                            data-url="@Url.Action("EditGrupo", new {id = Grupos.id})">
+                                        <i class="fas fa-edit"></i>
+                                    </button>
+                                    <button type="button" class="btn btn-tool btnexcluir" 
+                                            data-url="@Url.Action("DeleteGrupo", new {id = Grupos.id})" 
+                                            data-nome="@Grupos.nome" style="margin-right: 10px;">
+                                        <i class="fas fa-trash"></i>
+                                    </button>
+                                    <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
+                                        <i class="fas fa-minus"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="card-body" style="display: block;">
+                                <!--SUBGRUPOS-->
+                                @foreach (var Subgrupos in SubgruposService.GetSubgruposAll(Grupos.id))
+                                {
+                                    <div class="card elevation-0">
+                                        <div class="card-header">
+                                            <h3 class="card-title">1.@Grupos.codigo.@Subgrupos.codigo - @Subgrupos.nome</h3>
+
+                                            <div class="card-tools">
+                                                <button type="button" class="btn btn-tool btneditar"
+                                                        data-url="@Url.Action("EditSubgrupo", new {id = Subgrupos.id})">
+                                                    <i class="fas fa-edit"></i>
+                                                </button>
+                                                <button type="button" class="btn btn-tool btnexcluir"
+                                                        data-url="@Url.Action("DeleteSubgrupo", new {id = Subgrupos.id})"
+                                                        data-nome="@Subgrupos.nome" style="margin-right: 10px;">
+                                                    <i class="fas fa-trash"></i>
+                                                </button>
+                                                <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
+                                                    <i class="fas fa-minus"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div class="card-body" style="display: block;">
+                                            <!--CONTAS-->
+                                            @foreach (var Contas in ContasService.GetContasAll(Grupos.id, Subgrupos.id))
+                                            {
+                                                <div class="card elevation-0">
+                                                    <div class="card-header">
+                                                        <h3 class="card-title">1.@Grupos.codigo.@Subgrupos.codigo.@Contas.codigo - @Contas.nome</h3>
+
+                                                        <div class="card-tools">
+                                                            <button type="button" class="btn btn-tool btneditar"
+                                                                    data-url="@Url.Action("EditConta", new {id = Contas.id})">
+                                                                <i class="fas fa-edit"></i>
+                                                            </button>
+                                                            <button type="button" class="btn btn-tool btnexcluir"
+                                                                    data-url="@Url.Action("DeleteConta", new {id = Contas.id})"
+                                                                    data-nome="@Contas.nome" style="margin-right: 10px;">
+                                                                <i class="fas fa-trash"></i>
+                                                            </button>                                                           
+                                                        </div>
+                                                    </div>                                                   
+                                                </div>
+                                            }
+                                            <!--CONTAS-->
+                                        </div>
+                                        <!-- /.card-body-subgrupos -->
+
+                                    </div>
+                                }
+                                <!--SUBGRUPOS-->
+                            </div>
+                            <!-- /.card-body-grupos -->
+
+                        </div>
+                    }
+                    <!--GRUPOS-->
+                </div>
+                <!-- /.card-body-demonstrativo -->
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+<div id="modal-content"></div>
+
+@section scripts{
+    <script>
+        jQuery(function ($) {
+
+            var element = $(this);
+            element.button('loading');
+            var btnCadastro = $('.btncadastro');
+            var btnEditar = $('.btneditar');
+            var btnExcluir = $('.btnexcluir');
+
+            btnCadastro.click(function () {
+                var url = $(this).attr('data-url');
+
+                $('#modal-content').load(url, function (response, status) {
+                    element.button('reset');
+
+                    if (status == 'success') {
+                        $('#mymodal').modal('show');
+                    }
+
+                    if (status == 'error') {
+                        toastr.options = {
+                            "closeButton": true,
+                            "timeOut": '10000',
+                            "positionClass": "toast-bottom-right"
+                        }
+                        toastr["error"]("Ocorreu um erro na requisição");
+                    }
+                });
+            });
+
+            btnEditar.click(function () {
+                var url = $(this).attr('data-url');
+
+                $('#modal-content').load(url, function (response, status) {
+                    element.button('reset');
+
+                    if (status == 'success') {
+                        $('#mymodal').modal('show');
+                    }
+
+                    if (status == 'error') {
+                        toastr.options = {
+                            "closeButton": true,
+                            "timeOut": '10000',
+                            "positionClass": "toast-bottom-right"
+                        }
+                        toastr["error"]("Ocorreu um erro na requisição");
+                    }
+                });
+            });
+
+            btnExcluir.click(function () {
+                var url = $(this).attr('data-url');
+                var dataNome = $(this).attr('data-nome');
+                var title = 'Atenção';
+                var texto = 'Deseja excluir o ' + dataNome + '?';
+
+                confirmacaoExclusao(url, title, texto);
+
+            });
+
+            $('.dataTable').DataTable({
+                ordering: true,
+                responsive: true,
+                searching: false,
+                lengthChange: false,
+                info: true,
+                autoWidth: true,
+                paging: true,
+                pageLength: 10,
+                fnInitComplete: function () {
+                    $('#table-data').show();
+                    $('.overlay').hide();
+                },
+                language: {
+                    "sEmptyTable": "Nenhum registro encontrado",
+                    "sInfo": "Mostrando de _START_ até _END_ de _TOTAL_ registros",
+                    "sInfoEmpty": "Mostrando 0 até 0 de 0 registros",
+                    "sInfoFiltered": "(Filtrados de _MAX_ registros)",
+                    "sInfoPostFix": "",
+                    "sInfoThousands": ".",
+                    "lengthMenu": '<select>' +
+                        '<option value="5">5</option>' +
+                        '<option value="10">10</option>' +
+                        '<option value="20">20</option>' +
+                        '<option value="30">30</option>' +
+                        '<option value="40">40</option>' +
+                        '<option value="50">50</option>' +
+                        '<option value="-1">Todos</option>' +
+                        '</select>  Resultados por página',
+                    "sLoadingRecords": "Carregando...",
+                    "sProcessing": "Processando...",
+                    "sZeroRecords": "Nenhum registro encontrado",
+                    "sSearch": "Pesquisar",
+                    "oPaginate": {
+                        "sNext": "Próximo",
+                        "sPrevious": "Anterior",
+                        "sFirst": "Primeiro",
+                        "sLast": "Último"
+                    },
+                    "oAria": {
+                        "sSortAscendind": ": Ordenar colunas de forma ascendente",
+                        "sSortDescending": ": Ordenar colunas de forma descendente"
+                    }
+                }
+            });
+        });
+    </script>
+}
