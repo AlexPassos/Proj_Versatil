@@ -31,6 +31,7 @@ namespace Versatil.Data.Data
         public DbSet<Unidades> UNIDADESs { get; set; }
         public DbSet<Cfop> CFOPs { get; set; }
         public DbSet<SituacaoTributariaCofins> SITUACAOTRIBUTARIACOFINSs { get; set; }
+        public DbSet<SituacaoTributariaIpi> SITUACAOTRIBUTARIAIPIs { get; set; }
         public DbSet<SituacaoTributaria> SITUACAOTRIBUTARIAs { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

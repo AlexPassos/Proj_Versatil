@@ -26,6 +26,7 @@ namespace Versatil.Domain.AutoMapper
             CreateMap<Unidades, UnidadesViewModel>().ReverseMap();
             CreateMap<Cfop, CfopViewModel>().ReverseMap();
             CreateMap<SituacaoTributariaCofins, SituacaoTributariaCofinsViewModel>().ReverseMap();
+            CreateMap<SituacaoTributariaIpi, SituacaoTributariaIpiViewModel>().ReverseMap();
             CreateMap<SituacaoTributaria, SituacaoTributariaViewModel>().ReverseMap();
         }
     }
