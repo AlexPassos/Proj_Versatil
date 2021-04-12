@@ -29,6 +29,7 @@ namespace Versatil.Data.Data
         public DbSet<ContasSubgrupos> CONTASSUBGRUPOSs { get; set; }
         public DbSet<Contas> CONTASs { get; set; }
         public DbSet<Unidades> UNIDADESs { get; set; }
+        public DbSet<Cfop> CFOPs { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

@@ -24,6 +24,7 @@ namespace Versatil.Domain.AutoMapper
             CreateMap<ContasSubgrupos, ContasSubgruposViewModel>().ReverseMap();
             CreateMap<Contas, ContasViewModel>().ReverseMap();
             CreateMap<Unidades, UnidadesViewModel>().ReverseMap();
+            CreateMap<Cfop, CfopViewModel>().ReverseMap();
         }
     }
 }
