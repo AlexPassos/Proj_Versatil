@@ -29,6 +29,7 @@ namespace Versatil.Domain.AutoMapper
             CreateMap<SituacaoTributariaIpi, SituacaoTributariaIpiViewModel>().ReverseMap();
             CreateMap<SituacaoTributariaPis, SituacaoTributariaPisViewModel>().ReverseMap();
             CreateMap<SituacaoTributaria, SituacaoTributariaViewModel>().ReverseMap();
+            CreateMap<EstoqueCadastro, EstoqueCadastroViewModel>().ReverseMap();
         }
     }
 }

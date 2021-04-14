@@ -34,6 +34,7 @@ namespace Versatil.Data.Data
         public DbSet<SituacaoTributariaIpi> SITUACAOTRIBUTARIAIPIs { get; set; }
         public DbSet<SituacaoTributariaPis> SITUACAOTRIBUTARIAPISs { get; set; }
         public DbSet<SituacaoTributaria> SITUACAOTRIBUTARIAs { get; set; }
+        public DbSet<EstoqueCadastro> ESTOQUECADASTROs { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

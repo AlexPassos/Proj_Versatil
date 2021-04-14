@@ -204,10 +204,16 @@ D:\Projetos_AspNetCore\Proj_Versatil\src\Versatil.Web\obj\Debug\net5.0\Razor\Vie
 D:\Projetos_AspNetCore\Proj_Versatil\src\Versatil.Web\obj\Debug\net5.0\Razor\Views\Clientes\_InfoAdicionais.cshtml.g.cs
 D:\Projetos_AspNetCore\Proj_Versatil\src\Versatil.Web\obj\Debug\net5.0\Razor\Views\Clientes\_Observacoes.cshtml.g.cs
 D:\Projetos_AspNetCore\Proj_Versatil\src\Versatil.Web\obj\Debug\net5.0\Razor\Views\PlanoDeContas\Index.cshtml.g.cs
-D:\Projetos_AspNetCore\Proj_Versatil\src\Versatil.Web\obj\Debug\net5.0\Razor\Views\PlanoDeContas\_IndexResult.cshtml.g.cs
 D:\Projetos_AspNetCore\Proj_Versatil\src\Versatil.Web\obj\Debug\net5.0\Razor\Views\PlanoDeContas\CreateGrupo.cshtml.g.cs
 D:\Projetos_AspNetCore\Proj_Versatil\src\Versatil.Web\obj\Debug\net5.0\Razor\Views\PlanoDeContas\EditGrupo.cshtml.g.cs
 D:\Projetos_AspNetCore\Proj_Versatil\src\Versatil.Web\obj\Debug\net5.0\Razor\Views\PlanoDeContas\CreateSubgrupo.cshtml.g.cs
 D:\Projetos_AspNetCore\Proj_Versatil\src\Versatil.Web\obj\Debug\net5.0\Razor\Views\PlanoDeContas\EditSubgrupo.cshtml.g.cs
 D:\Projetos_AspNetCore\Proj_Versatil\src\Versatil.Web\obj\Debug\net5.0\Razor\Views\PlanoDeContas\CreateConta.cshtml.g.cs
 D:\Projetos_AspNetCore\Proj_Versatil\src\Versatil.Web\obj\Debug\net5.0\Razor\Views\PlanoDeContas\EditConta.cshtml.g.cs
+D:\Projetos_AspNetCore\Proj_Versatil\src\Versatil.Web\obj\Debug\net5.0\Razor\Views\EstoqueCadastro\Index.cshtml.g.cs
+D:\Projetos_AspNetCore\Proj_Versatil\src\Versatil.Web\obj\Debug\net5.0\Razor\Views\EstoqueCadastro\_IndexResult.cshtml.g.cs
+D:\Projetos_AspNetCore\Proj_Versatil\src\Versatil.Web\obj\Debug\net5.0\Razor\Views\EstoqueCadastro\Create.cshtml.g.cs
+D:\Projetos_AspNetCore\Proj_Versatil\src\Versatil.Web\obj\Debug\net5.0\Razor\Views\EstoqueCadastro\_DadosProduto.cshtml.g.cs
+D:\Projetos_AspNetCore\Proj_Versatil\src\Versatil.Web\obj\Debug\net5.0\Razor\Views\EstoqueCadastro\_InfoTributaria.cshtml.g.cs
+D:\Projetos_AspNetCore\Proj_Versatil\src\Versatil.Web\obj\Debug\net5.0\Razor\Views\EstoqueCadastro\_Observacoes.cshtml.g.cs
+D:\Projetos_AspNetCore\Proj_Versatil\src\Versatil.Web\obj\Debug\net5.0\Razor\Views\EstoqueCadastro\Edit.cshtml.g.cs

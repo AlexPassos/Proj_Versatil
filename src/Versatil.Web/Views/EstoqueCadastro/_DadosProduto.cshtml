@@ -1,0 +1,79 @@
+@model Versatil.Domain.ViewModels.EstoqueCadastroViewModel
+
+ @await Component.InvokeAsync("Summary")
+ 
+<div class="form-row">
+    <div class="form-group col-sm-1">
+        <label asp-for="id" class="control-label text-sm"></label>
+        <input asp-for="id" class="form-control form-control-sm" readonly />
+        <span asp-validation-for="id" class="text-danger text-xs"></span>
+    </div>
+    <div class="form-group col-sm-2">
+        <label asp-for="datacad" class="control-label text-sm"></label>
+        <input asp-for="datacad" class="form-control form-control-sm"  readonly  />
+        <span asp-validation-for="datacad" class="text-danger text-xs"></span>
+    </div>
+    <div class="form-group col-sm-2">
+        <label asp-for="situacao" class="control-label text-sm"></label>
+        <select asp-for="situacao" class="form-control form-control-sm">
+            <option value=true>Ativo</option>
+            <option value=false>Inativo</option>
+        </select>
+        <span asp-validation-for="situacao" class="text-danger text-xs"></span>
+    </div>   
+</div>
+
+<div class="form-row">
+   
+    <div class="form-group col-sm-6">
+        <label asp-for="descricao" class="control-label text-sm"></label>
+        <input asp-for="descricao" class="form-control form-control-sm" />
+        <span asp-validation-for="descricao" class="text-danger text-xs"></span>
+    </div>
+    <div class="form-group col-sm-2">
+        <label asp-for="unidadesID" class="control-label text-sm"></label>
+        <select asp-for="unidadesID" asp-items="@ViewBag.Unidades" class="form-control form-control-sm" >
+            <option disabled selected>Selecione...</option>
+        </select>
+        <span asp-validation-for="unidadesID" class="text-danger text-xs"></span>
+    </div>
+    <div class="form-group col-sm-4">
+        <label asp-for="marcasID" class="control-label text-sm"></label>
+        <select asp-for="marcasID" asp-items="@ViewBag.Marcas" class="form-control form-control-sm" >
+            <option disabled selected>Selecione...</option>
+        </select>
+        <span asp-validation-for="marcasID" class="text-danger text-xs"></span>
+    </div>
+
+</div>
+<div class="form-row">
+
+    <div class="form-group col-sm-2">
+        <label asp-for="ncm" class="control-label text-sm"></label>
+        <input asp-for="ncm" class="form-control form-control-sm" />
+        <span asp-validation-for="ncm" class="text-danger text-xs"></span>
+    </div>
+    <div class="form-group col-sm-2">
+        <label asp-for="cfopID" class="control-label text-sm"></label>
+        <select asp-for="cfopID" asp-items="@ViewBag.Cfop" class="form-control form-control-sm">
+            <option disabled selected>Selecione...</option>
+        </select>
+        <span asp-validation-for="cfopID" class="text-danger text-xs"></span>
+    </div>
+    <div class="form-group col-sm-2">
+        <label asp-for="peso" class="control-label text-sm"></label>
+        <input asp-for="peso" class="form-control form-control-sm" />
+        <span asp-validation-for="peso" class="text-danger text-xs"></span>
+    </div>
+    <div class="form-group col-sm-2">
+        <label asp-for="comissao" class="control-label text-sm"></label>
+        <input asp-for="comissao" class="form-control form-control-sm" />
+        <span asp-validation-for="comissao" class="text-danger text-xs"></span>
+    </div>
+    <div class="form-group col-sm-2">
+        <label asp-for="valor" class="control-label text-sm"></label>
+        <input asp-for="valor" class="form-control form-control-sm" />
+        <span asp-validation-for="valor" class="text-danger text-xs"></span>
+    </div>
+   
+</div>

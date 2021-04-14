@@ -1,0 +1,118 @@
+@model Versatil.Domain.ViewModels.EstoqueCadastroViewModel
+
+<div class="form-row">
+
+    <div class="form-group col-sm-6">
+        <label asp-for="tribicmsID" class="control-label text-sm"></label>
+        <select asp-for="tribicmsID" asp-items="@ViewBag.Icms" class="form-control form-control-sm">
+            <option disabled selected>Selecione...</option>            
+        </select>
+        <span asp-validation-for="tribicmsID" class="text-danger text-xs"></span>
+    </div>
+    <div class="form-group col-sm-2">
+        <label asp-for="aliquotacredito" class="control-label text-sm"></label>
+        <input asp-for="aliquotacredito" class="form-control form-control-sm" />              
+        <span asp-validation-for="aliquotacredito" class="text-danger text-xs"></span>
+    </div>
+    <div class="form-group col-sm-2">
+        <label asp-for="aliquotabaseicms" class="control-label text-sm"></label>
+        <input asp-for="aliquotabaseicms" class="form-control form-control-sm"/>                            
+        <span asp-validation-for="aliquotabaseicms" class="text-danger text-xs"></span>
+    </div>
+    <div class="form-group col-sm-2">
+        <label asp-for="aliquotaicms" class="control-label text-sm"></label>
+        <input asp-for="aliquotaicms" class="form-control form-control-sm"/>                            
+        <span asp-validation-for="aliquotaicms" class="text-danger text-xs"></span>
+    </div>
+
+</div>
+
+<div class="form-row">
+
+    <div class="form-group col-sm-2">
+        <label asp-for="pautafiscal" class="control-label text-sm"></label>
+        <input asp-for="pautafiscal" class="form-control form-control-sm" />
+        <span asp-validation-for="pautafiscal" class="text-danger text-xs"></span>
+    </div>
+    <div class="form-group col-sm-2">
+        <label asp-for="aliquotabaseicmsst" class="control-label text-sm"></label>
+        <input asp-for="aliquotabaseicmsst" class="form-control form-control-sm" />
+        <span asp-validation-for="aliquotabaseicmsst" class="text-danger text-xs"></span>
+    </div>
+    <div class="form-group col-sm-2">
+        <label asp-for="aliquotaicmsst" class="control-label text-sm"></label>
+        <input asp-for="aliquotaicmsst" class="form-control form-control-sm" />
+        <span asp-validation-for="aliquotaicmsst" class="text-danger text-xs"></span>
+    </div>
+
+    <div class="form-group col-sm-2">
+        <label asp-for="aliquotaiss" class="control-label text-sm"></label>
+        <input asp-for="aliquotaiss" class="form-control form-control-sm" />
+        <span asp-validation-for="aliquotaiss" class="text-danger text-xs"></span>
+    </div>
+    
+    <div class="form-group col-sm-2">
+        <label asp-for="cest" class="control-label text-sm"></label>
+        <input asp-for="cest" class="form-control form-control-sm" />
+        <span asp-validation-for="cest" class="text-danger text-xs"></span>
+    </div>
+
+</div>
+
+<div class="form-row">
+
+    <div class="form-group col-sm-9">
+        <label asp-for="tribpisID" class="control-label text-sm"></label>
+        <select asp-for="tribpisID" asp-items="@ViewBag.Pis" class="form-control form-control-sm">
+            <option disabled selected>Selecione...</option>
+        </select>
+        <span asp-validation-for="tribpisID" class="text-danger text-xs"></span>
+    </div>
+    <div class="form-group col-sm-3">
+        <label asp-for="aliquotapis" class="control-label text-sm"></label>
+        <input asp-for="aliquotapis" class="form-control form-control-sm" />
+        <span asp-validation-for="aliquotapis" class="text-danger text-xs"></span>
+    </div>    
+
+</div>
+
+<div class="form-row">
+
+    <div class="form-group col-sm-9">
+        <label asp-for="tribcofinsID" class="control-label text-sm"></label>
+        <select asp-for="tribcofinsID" asp-items="@ViewBag.Cofins" class="form-control form-control-sm">
+            <option disabled selected>Selecione...</option>
+        </select>
+        <span asp-validation-for="tribcofinsID" class="text-danger text-xs"></span>
+    </div>
+    <div class="form-group col-sm-3">
+        <label asp-for="aliquotacofins" class="control-label text-sm"></label>
+        <input asp-for="aliquotacofins" class="form-control form-control-sm" />
+        <span asp-validation-for="aliquotacofins" class="text-danger text-xs"></span>
+    </div>    
+
+</div>
+
+<div class="form-row">
+
+    <div class="form-group col-sm-9">
+        <label asp-for="tribipiID" class="control-label text-sm"></label>
+        <select asp-for="tribipiID" asp-items="@ViewBag.Ipi" class="form-control form-control-sm">
+            <option disabled selected>Selecione...</option>
+        </select>
+        <span asp-validation-for="tribipiID" class="text-danger text-xs"></span>
+    </div>
+    <div class="form-group col-sm-3">
+        <label asp-for="aliquotaipi" class="control-label text-sm"></label>
+        <input asp-for="aliquotaipi" class="form-control form-control-sm" />
+        <span asp-validation-for="aliquotaipi" class="text-danger text-xs"></span>
+    </div>    
+
+</div>
+
+<div class="form-row">
+
+  
+
+</div>
+
