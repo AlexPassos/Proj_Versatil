@@ -23,6 +23,13 @@ namespace Versatil.Domain.AutoMapper
             CreateMap<ContasGrupos, ContasGruposViewModel>().ReverseMap();
             CreateMap<ContasSubgrupos, ContasSubgruposViewModel>().ReverseMap();
             CreateMap<Contas, ContasViewModel>().ReverseMap();
+            CreateMap<Unidades, UnidadesViewModel>().ReverseMap();
+            CreateMap<Cfop, CfopViewModel>().ReverseMap();
+            CreateMap<SituacaoTributariaCofins, SituacaoTributariaCofinsViewModel>().ReverseMap();
+            CreateMap<SituacaoTributariaIpi, SituacaoTributariaIpiViewModel>().ReverseMap();
+            CreateMap<SituacaoTributariaPis, SituacaoTributariaPisViewModel>().ReverseMap();
+            CreateMap<SituacaoTributaria, SituacaoTributariaViewModel>().ReverseMap();
+            CreateMap<EstoqueCadastro, EstoqueCadastroViewModel>().ReverseMap();
         }
     }
 }

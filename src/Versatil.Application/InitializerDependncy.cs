@@ -43,6 +43,13 @@ namespace Versatil.Application
             services.AddScoped<IContasGruposRepository, ContasGruposRepository>();
             services.AddScoped<IContasSubgruposRepository, ContasSubgruposRepository>();
             services.AddScoped<IContasRepository, ContasRepository>();
+            services.AddScoped<IUnidadesRepository, UnidadesRepository>();
+            services.AddScoped<ICfopRepository, CfopRepository>();
+            services.AddScoped<ISituacaoTributariaCofinsRepository, SituacaoTributariaCofinsRepository>();
+            services.AddScoped<ISituacaoTributariaIpiRepository, SituacaoTributariaIpiRepository>();
+            services.AddScoped<ISituacaoTributariaPisRepository, SituacaoTributariaPisRepository>();
+            services.AddScoped<ISituacaoTributariaRepository, SituacaoTributariaRepository>();
+            services.AddScoped<IEstoqueCadastroRepository, EstoqueCadastroRepository>();
 
             //Serives
             services.AddScoped<INotificador, Notificador>();
@@ -59,6 +66,7 @@ namespace Versatil.Application
             services.AddScoped<IContasGruposService, ContasGruposService>();
             services.AddScoped<IContasSubgruposService, ContasSubgruposService>();
             services.AddScoped<IContasService, ContasService>();
+            services.AddScoped<IEstoqueCadastroService, EstoqueCadastroService>();
 
             return services;
         }

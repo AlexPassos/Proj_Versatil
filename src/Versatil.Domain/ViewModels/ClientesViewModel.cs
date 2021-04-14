@@ -11,7 +11,7 @@ namespace Versatil.Domain.ViewModels
 
         [Display(Name = "Data do cadastro")]
         [DataType(DataType.Date)]
-        [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:dd/MM/yyyy}")]
+        [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:yyyy-MM-dd}")]
         public DateTime datacad { get; set; }
 
         [Display(Name = "Tipo do cliente")]

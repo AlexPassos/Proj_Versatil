@@ -1,0 +1,133 @@
+﻿@model Versatil.Domain.ViewModels.EstoqueCadastroViewModel
+
+@{
+    Layout = null;
+}
+
+@Html.Partial("_ValidationScriptsPartial")
+
+<!-- form start -->
+<form id="formCreate" asp-action="Edit" method="POST">
+    <input asp-for="empresaID" type="hidden"/>
+
+    <div class="modal fade" id="mymodal" role="dialog" tabindex="-1" data-backdrop="static">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Editar cadastro</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <!-- TABS -->
+
+                    <div class="card card-outline card-secondary card-tabs">
+                        <div class="card-header p-0 pt-1">
+
+                            <ul class="nav nav-tabs" id="custom-tabs-one-tab" role="tablist">
+                                <li class="nav-item">
+                                    <a class="nav-link active" id="custom-tabs-one-home-tab" data-toggle="pill"
+                                       href="#custom-tabs-one-home" role="tab" aria-controls="custom-tabs-one-home"
+                                       aria-selected="true">Dados do Produto</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" id="custom-tabs-one-profile-tab" data-toggle="pill"
+                                       href="#custom-tabs-one-profile" role="tab"
+                                       aria-controls="custom-tabs-one-profile" aria-selected="false">
+                                        Informações
+                                        Tributárias
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" id="custom-tabs-one-messages-tab" data-toggle="pill"
+                                       href="#custom-tabs-one-messages" role="tab"
+                                       aria-controls="custom-tabs-one-messages" aria-selected="false">Observações</a>
+                                </li>
+
+                            </ul>
+
+                        </div>
+                        <div class="card-body">
+                            <!-- corpo -->
+                            <div class="tab-content" id="custom-tabs-one-tabContent">
+                                <div class="tab-pane fade active show" id="custom-tabs-one-home" role="tabpanel"
+                                     aria-labelledby="custom-tabs-one-home-tab">
+                                    <!--DADOS -->
+                                    @Html.Partial("_DadosProduto", Model)
+                                    <!--DADOS -->
+                                </div>
+                                <div class="tab-pane fade" id="custom-tabs-one-profile" role="tabpanel"
+                                     aria-labelledby="custom-tabs-one-profile-tab">
+                                    <!--INFORMACOES -->
+                                    @Html.Partial("_InfoTributaria", Model)
+                                    <!--INFORMACOES -->
+                                </div>
+                                <div class="tab-pane fade" id="custom-tabs-one-messages" role="tabpanel"
+                                     aria-labelledby="custom-tabs-one-messages-tab">
+                                    <!--OBSERVACOES-->
+                                    @Html.Partial("_Observacoes", Model)
+                                    <!--OBSERVACOES-->
+                                </div>
+
+                            </div>
+                            <!-- corpo -->
+                        </div>
+
+                    </div>
+                    <!-- TABS -->
+
+                </div>
+                <div class="modal-footer justify-content-between">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+                    <button id="btnsalvar" type="button" class="btn bg-gradient-info ">Salvar</button>
+                </div>
+
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+    <!-- /.modal -->
+</form>
+
+<script>
+    $(function () {
+
+        var form = $('#formCreate');
+        var thisForm = form[0];
+        var btnSalvar = $('#btnsalvar');
+        var myModal = $('#mymodal');
+
+        var txtValor = $('#valor');
+        
+        txtValor.inputmask('currency', {
+            "autoUnmask": true,
+            radixPoint: ",",
+            groupSeparator: ".",
+            allowMinus: false,
+            prefix: 'R$ ',
+            digits: 2,
+            digitsOptional: false,
+            rightAlign: true,
+            unmaskAsNumber: true
+        });
+        
+        $(':input').inputmask();
+
+        btnSalvar.click(function () {
+
+            if (form.valid()) {
+                btnSalvar.attr('disabled', 'disabled');
+                txtValor.inputmask('remove');
+                form.submit();
+
+            } else {
+                mensagemWarningToast('Preencha todos os campos obrigatórios');
+            }
+
+        });
+
+    });
+</script>

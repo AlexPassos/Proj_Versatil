@@ -28,7 +28,7 @@
 
             <tr role="row" class="odd">
                 <td class="no_sort text-md">@situacao</td>
-                <td class="sorting_1 text-md">@Html.DisplayFor(model => item.data)</td>
+                <td class="sorting_1 text-md">@String.Format("{0:dd/MM/yyyy}", item.data)</td>
                 <td class="sorting_1 text-md">@Html.DisplayFor(model => item.nome)</td>
                 <td class="text-center">
                     <button class="btn bg-gradient-secondary btn-sm btneditar" 

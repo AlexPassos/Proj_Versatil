@@ -28,6 +28,13 @@ namespace Versatil.Data.Data
         public DbSet<ContasGrupos> CONTASGRUPOSs { get; set; }
         public DbSet<ContasSubgrupos> CONTASSUBGRUPOSs { get; set; }
         public DbSet<Contas> CONTASs { get; set; }
+        public DbSet<Unidades> UNIDADESs { get; set; }
+        public DbSet<Cfop> CFOPs { get; set; }
+        public DbSet<SituacaoTributariaCofins> SITUACAOTRIBUTARIACOFINSs { get; set; }
+        public DbSet<SituacaoTributariaIpi> SITUACAOTRIBUTARIAIPIs { get; set; }
+        public DbSet<SituacaoTributariaPis> SITUACAOTRIBUTARIAPISs { get; set; }
+        public DbSet<SituacaoTributaria> SITUACAOTRIBUTARIAs { get; set; }
+        public DbSet<EstoqueCadastro> ESTOQUECADASTROs { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
